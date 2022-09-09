@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Qwitcher+Grypen:wght@700&family=Source+Sans+Pro:wght@600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.sideBar{
+    width: 100vw;
+    height: fit-content;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: absolute;
+    background-color: rgb(194, 196, 199);
+    
+
+}
+
+.sideBar nav ul{
+    display: flex;
+    background-color: rgb(194, 196, 199);
+
+}
+.sideBar nav li{
+    list-style: none;
+    margin: 30px ;
+}
+.sideBar nav li a{
+    text-decoration: none;
+    color: black;
+}
+
+.main{
+    /* background-color: aqua; */
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+.infoContainer{
+    /* background-color: rgb(251, 255, 0); */
+    width: 70vw;
+    height: 70vh;
+    margin: 0 auto;
+    justify-content: space-around;
+    display: flex;
+    padding-top: 25px;
+}
+.pic img{
+    height: 60vh;
+}
+
+.devInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello{
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 50px;
+}
+
+.name{
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+}
+
+.about{
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 40px;
+}
+.buttons button{
+    padding: 5px 8px;
+    border-radius: 14px;
+    color: rgb(82, 122, 207) ;
+    background-color: white ;
+    
+    font-weight: bold;
+    
+}
+
+.buttons button:hover{
+    background-color: rgb(82, 122, 207);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 703px) and (max-width: 1200px) { 
+    
+    .container{
+        display: flex;
+        
+    }
+
+    .sideBar nav ul{
+        background-color: rgb(194, 196, 199);
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .sideBar{
+        width: fit-content;
+        height: 100vh;
+        font-family: 'Lato', sans-serif;
+        font-size: 30px;
+        position: absolute;
+        background-color: rgb(194, 196, 199);
+        transform: translateX(-260px);
+        
+    
+    }
+    .sideBar nav li{
+        list-style: none;
+        margin: 10px ;
+    }
+ }
+
+
+
+
+ @media (width <= 703px) { 
+   
+    
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sideBar{
+        width: 20vw;
+        height: 100vh;
+        font-family: 'Lato', sans-serif;
+        font-size: 30px;
+        background-color: rgb(194, 196, 199);
+        transform: translateX(-260px);
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .infoContainer{
+        display: flex;
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+    .pic{
+        margin: auto;
+    }
+    .pic img{
+        height: 25vh;
+        display: flex;
+        justify-content: center;
+    }
+  }
