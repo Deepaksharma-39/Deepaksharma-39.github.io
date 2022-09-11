@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deepak Sharma - Web Developer, Programmer, Back-end Developer</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="sideBar">
-        <nav>
-          <ul>
-            <li><a href="">HOME</a></li>
-            <li><a href="">INTRODUCTION</a></li>
-            <li><a href="">SKILLS</a></li>
-            <li><a href="">PROJECTS</a></li>
-            <li><a href="">CONTACT</a></li>
-            <li><a href="">LINKS</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="main">
-        <div class="infoContainer">
-          <div class="devInfo">
-            <div class="hello">Hi, I am</div>
-            <div class="name">DEEPAK SHARMA</div>
-            <div class="about">Developer, Tech & Fashion enthusiast</div>
-            <div class="buttons">
-              <button>Download Resume</button>
-              <button>Contact</button>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2f495e79cb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#home">Portfo<span>lio.</span></a></div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars" ></i>
             </div>
-          </div>
-          <div class="pic"><img src="Pic\pic.png" alt="" /></div>
         </div>
-      </div>
-    </div>
-  </body>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="hello">Hi, I am</div>
+                <div class="name">DEEPAK Sharma</div>
+                <div class="about"> Developer, Tech & fashion Enthusiast</div>
+                <div class="mini-intro"> Proficient in <span>JAVA</span></div>
+                <a href="#">Resume</a>
+            <a href="#contact">Contact</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- about -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title"> Introduction</h2>
+            <hr>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="pic/sample.png" alt="">
+                </div>
+
+                <div class="column right">
+                    <div class="text">I am Deepak Sharma and i'm a <span>Developer</span></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam beatae a ducimus quos. Necessitatibus blanditiis consequuntur architecto molestiae quae animi amet odio voluptates expedita vel enim temporibus, assumenda officiis dolorum praesentium nostrum? Minima dolore tempore incidunt hic. Quibusdaptio. Ut doloribus excepturi eligendi eius obcaecati. Fugiat doloribus, quod officia laboriosam dolor non optio? Consequatur nihil id odio eos accusamus impedit, assumenda iusto nisi asperiores obcaecati fugiat. Nam, quibusdam inventore placeat fugit quas iure.<a  href="#">read more...</a></p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills -->
+    
+</body>
 </html>
+<script src="index.js"></script>
