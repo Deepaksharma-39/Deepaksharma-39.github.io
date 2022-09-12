@@ -1,213 +1,385 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Lato&family=Qwitcher+Grypen:wght@700&family=Smooch&family=Ubuntu:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Lato&family=Qwitcher+Grypen:wght@700&family=Smooch&family=Ubuntu:wght@500&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
-
 
 /* navbar Styling */
 
-.max-width{
-    max-width: 95%;
-    margin:auto;
-    padding: 0 60px;
+.max-width {
+  max-width: 95%;
+  margin: auto;
+  padding: 0 60px;
 }
 
-.navbar{
-    position: fixed;
-    width: 100%;
-    padding: 30px 0;
-    transition: all 0.3s ease;
-    z-index: 9999;
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 30px 0;
+  transition: all 0.3s ease;
+  z-index: 9999;
 }
-.navbar.sticky{
-    padding: 5px 0;
-    background: crimson;
-}
-
-.navbar .max-width{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar.sticky {
+  padding: 5px 0;
+  background: crimson;
 }
 
-
-.navbar .logo a{
-    color: rgb(0, 0, 0);
-    font-size: 45px;
-    font-family: 'Ubuntu', sans-serif;
-    /* font-weight: ; */
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.navbar.sticky .logo a span{
-    color: #fff;
+.navbar .logo a {
+  color: rgb(0, 0, 0);
+  font-size: 45px;
+  font-family: "Ubuntu", sans-serif;
+  /* font-weight: ; */
 }
 
-.navbar .logo a span{
-    color: crimson;
+.navbar.sticky .logo a span {
+  color: #fff;
 }
 
-.navbar .menu li{
-    list-style: none;
-    display: inline-block;
-    font-family: 'Ubuntu', sans-serif;
+.navbar .logo a span {
+  color: crimson;
 }
 
-.navbar .menu li a{
-color: rgb(0, 0, 0);
-margin-left: 25px;
-font-size: 20px;
-transition: color 0.3s ease;
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.navbar .menu li a:hover{
-    color: crimson;
+.navbar .menu li a {
+  color: rgb(0, 0, 0);
+  margin-left: 25px;
+  font-size: 20px;
+  transition: color 0.3s ease;
 }
-.navbar.sticky .menu li a:hover{
-    color: #fff;
+
+.navbar .menu li a:hover {
+  color: crimson;
+}
+.navbar.sticky .menu li a:hover {
+  color: #fff;
 }
 
 /* Menu button */
 
-.menu-btn{
-    font-size: 23px;
-    cursor: pointer;
-    display: none;
-    color: #fff;
+.menu-btn {
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+  color: #fff;
 }
 
 /* home section */
 
-.home{
-    display: flex;
-    border: 1px solid;
-    background: url("pic/Background.png") no-repeat center;
-    background-size: cover;
-    height: 100vh;
+.home {
+  display: flex;
+  border: 1px solid;
+  background: url("pic/Background.png") no-repeat center;
+  background-size: cover;
+  height: 100vh;
 }
 
-.home .max-width{
-margin: auto 0 auto 40px;
+.home .max-width {
+  margin: auto 0 auto 40px;
 }
 
-.home .home-content .hello{
-    font-size: 50px;
-    font-family: 'Smooch', cursive;
-    margin-top: 50px;
+.home .home-content .hello {
+  font-size: 50px;
+  font-family: "Smooch", cursive;
+  margin-top: 50px;
 }
 
-.home .home-content .name{
-    font-size: 60px;
-    font-family: 'Ubuntu', sans-serif;
-    margin-left: -3px;
+.home .home-content .name {
+  font-size: 60px;
+  font-family: "Ubuntu", sans-serif;
+  margin-left: -3px;
 }
 
-
-.home .home-content .about{
-    font-size: 40px;
-    font-family: 'Smooch', cursive;
-    margin: 5px 0;
+.home .home-content .about {
+  font-size: 40px;
+  font-family: "Smooch", cursive;
+  margin: 5px 0;
 }
 
-.home .home-content .mini-intro{
-    font-size: 40px;
-    font-family: 'Smooch', cursive;
-    margin: 5px 0;
+.home .home-content .mini-intro {
+  font-size: 40px;
+  font-family: "Smooch", cursive;
+  margin: 5px 0;
 }
 
-.home .home-content .mini-intro span{
-    color: crimson;
-    font-family: 'Ubuntu', sans-serif;
+.home .home-content .mini-intro span {
+  color: crimson;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.home .home-content a{
-display: inline-block;
-background: crimson;
-color: #fff;
-padding: 13px 24px;
-margin-top: 20px;
-margin-left: 12px;
-border-radius: 8px;
-border: 2px solid crimson;
-font-family: 'Ubuntu', sans-serif;
-margin-left: 0;
+.home .home-content a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  padding: 13px 24px;
+  margin-top: 20px;
+  margin-left: 12px;
+  border-radius: 8px;
+  border: 2px solid crimson;
+  font-family: "Ubuntu", sans-serif;
+  margin-left: 0;
 }
 
-.home .home-content a:hover{
-    color: crimson;
-    background: none;
+.home .home-content a:hover {
+  color: crimson;
+  background: none;
 }
 
 /* about */
 
-
-section{
-    padding: 100px 0;
+section {
+  padding: 100px 0;
 }
-.about{
-    font-family: 'Poppins', sans-serif;
-    
-}
-
-.about .title{
-    position: relative;
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-    font-size: 40px;
-    padding-bottom: 25px;
+.about,
+.projects,
+.skill {
+  font-family: "Ubuntu", sans-serif;
 }
 
-
-
-
-
-.about .about-content{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    
+section .title {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 25px;
 }
 
-.about .about-content .left{
-    width: 45%;
-}
-.about .about-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-}
-
-.about .about-content .right{
-    width: 55%;
-    object-fit: cover;
+.about .about-content,
+.projects .project-content,
+.skill .skill-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.about .about-content .right .text{
-    font-size: 30px;
-    font-family: 'Heebo', sans-serif;
+.about .about-content .left {
+  width: 45%;
+}
+.about .about-content .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}
+
+.about .about-content .right {
+  width: 55%;
+  object-fit: cover;
+}
+
+.about .about-content .right .text {
+  font-size: 30px;
+  font-family: "Heebo", sans-serif;
+  margin-bottom: 10px;
+}
+.about .about-content .right span {
+  color: crimson;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.about .about-content .right p {
+  text-align: justify;
+  font-family: "Heebo", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.about .about-content .right a {
+  display: inline-block;
+  color: crimson;
+  font-family: "Heebo", sans-serif;
+}
+
+/* project */
+
+.projects {
+  color: #fff;
+  background: black;
+}
+
+.projects .project-content {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+.projects .project-content .card {
+  width: 40vw;
+}
+
+.projects .project-content .card .img {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.projects .project-content .card .img:hover {
+  transform: scale(1.1);
+}
+
+.projects .project-content .card img {
+  height: 250px;
+  width: 30vw;
+  object-fit: cover;
+}
+
+.projects .project-content .card .text {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 25px;
+  margin: 10px auto;
+}
+
+.projects .project-content .card p {
+  text-align: justify;
+  font-size: 16px;
+  font-family: "Heebo", sans-serif;
+}
+
+.projects .project-content .card .links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  margin: auto;
+}
+
+.projects .project-content .card .pro-btn {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  padding: 13px 24px;
+  margin-top: 20px;
+  margin-left: 12px;
+  border-radius: 8px;
+  border: 2px solid crimson;
+  font-family: "Ubuntu", sans-serif;
+  margin-left: 0;
+  font-size: 16px;
+}
+
+.projects .project-content .card .pro-btn:hover {
+  color: crimson;
+  background: none;
+}
+
+
+.skill .skill-content p{
+text-align: justify;
+  font-size: 16px;
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+}
+
+.skill .skill-content .column {
+  width: calc(50% - 50px);
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.skill .skill-content .column .text{
     margin-bottom: 10px;
-    
-}
-.about .about-content .right span{
-    color: crimson;
-    font-weight: bolder;
-    margin-bottom: 10px;
+    font-size: 25px;
 }
 
-.about .about-content .right p{
+.skill .skill-content .column .bars{
     text-align: justify;
-    font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+  font-family: "Heebo", sans-serif;
+  
 }
 
-.about .about-content .right a{
-display: inline-block;
-color: crimson;
-font-family: 'Heebo', sans-serif;
+.skill .skill-content .column .bars .info{
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 15px;
 }
+
+.skill .skill-content .column .bars .info span{
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.skill .skill-content .column .bars  .line{
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+
+.skill .skill-content .column .bars  .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left:0;
+    top: 0;
+    background: crimson;
+}
+
+.skill .skill-content .column .bars .html::before{
+    width: 90%;
+}
+
+.skill .skill-content .column .bars .css::before{
+    width: 50%;
+}
+
+.skill .skill-content .column .bars .javascript::before{
+    width: 80%;
+}
+.skill .skill-content .column .bars .java::before{
+    width: 90%;
+}
+.skill .skill-content .column .bars .git::before{
+    width: 60%;
+}
+.skill .skill-content .column .bars .DSA::before{
+    width: 60%;
+}
+.skill .skill-content .column .bars .TW::before{
+    width: 90%;
+}
+.skill .skill-content .column .bars .TC::before{
+    width: 90%;
+}
+.skill .skill-content .column .bars .rwork::before{
+    width: 80%;
+}
+
+.skill .skill-content .column .bars .proactive::before{
+    width: 95%;
+}
+
+.skill .skill-content .column .bars .PBM::before{
+    width: 90%;
+}
+
+.skill .skill-content .column .bars .TM::before{
+    width: 90%;
+}
+
+
+
+
+
 
 
 
@@ -221,145 +393,166 @@ font-family: 'Heebo', sans-serif;
 
 /* media query */
 
+@media (max-width: 1054px) {
+  .about .about-content .left img {
+    height: 300px;
+    width: 300px;
+  }
 
-@media(max-width:1054px){
-    .about .about-content .left img{
-        height: 300px;
-        width: 300px;
-    }
-
-    .about .about-content .right .text{
-        font-size: 20px;
-        font-family: 'Heebo', sans-serif;
-        
-    }
+  .about .about-content .right .text {
+    font-size: 20px;
+    font-family: "Heebo", sans-serif;
+  }
 }
-@media(max-width:900px){
+@media (max-width: 900px) {
+  .max-width {
+    width: 90%;
+    padding: 0 15px;
+    margin: auto;
+  }
 
-    .max-width{
-        width: 90%;
-        padding: 0 15px;
-        margin: auto;
-    }
+  .menu-btn {
+    font-size: 23px;
+    cursor: pointer;
+    display: block;
+    color: black;
+    z-index: 999;
+  }
 
-    .menu-btn{
-        font-size: 23px;
-        cursor: pointer;
-        display: block;
-        color: black;
-        z-index: 999;
-    }
+  .navbar .menu {
+    position: fixed;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    text-align: center;
+    padding-top: 100px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
 
-    .navbar .menu{
-        position: fixed;
-        background: black;
-        height: 100vh;
-        width:100%;
-        left:-100%;
-        top:0;
-        text-align: center;
-        padding-top: 100px;
-        transition: all 0.3s ease;
-    }
-    .navbar .menu.active{
-        left:0;
-    }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    color: #fff;
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 28px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu li a:hover {
+    color: crimson;
+  }
 
-    .navbar .menu li{
-        display: block;
-    }
-    .navbar .menu li a{
-        color: #fff;
-        display: inline-block;
-        margin:20px 0;
-        font-size: 28px;
-        transition: all 0.3s ease;
-    }
-    .navbar .menu li a:hover{
-        color: crimson;
-    }
+  .navbar .logo a {
+    font-size: 40px;
+  }
 
-    .navbar .logo a{
-        font-size: 40px;
-    }
+  .home .home-content .hello {
+    font-size: 30px;
+  }
 
-    .home .home-content .hello{
-        font-size: 30px
-    }
-    
-    .home .home-content .name{
-        font-size: 40px
-    }
-    
-    
-    .home .home-content .about{
-        font-size: 20px;
-    }
-    
-    .home .home-content .mini-intro{
-        font-size: 20px;
-    }
+  .home .home-content .name {
+    font-size: 40px;
+  }
 
-    .home .home-content .name{
-        font-size: 30px;
-    }
+  .home .home-content .about {
+    font-size: 20px;
+  }
 
-    .home .home-content a{
-        font-size: 15px;
-        padding: 10px 18px;
-        margin-left: 0;
-    }
-}
+  .home .home-content .mini-intro {
+    font-size: 20px;
+  }
 
+  .home .home-content .name {
+    font-size: 30px;
+  }
 
-@media(max-width:790px){
-    .about .about-content{
-        flex-direction: column;
-        align-items: center;
-    }
+  .home .home-content a {
+    font-size: 15px;
+    padding: 10px 18px;
+    margin-left: 0;
+  }
 
-    .about .about-content .left{
-        /* width:100%; */
-        height: fit-content;
-    }
-
-    
-
-    .about .about-content .right{
-        width: 100%;
-        object-fit: cover;
-    }
-    
+  .projects .project-content .card .pro-btn {
+    font-size: 15px;
+    padding: 10px 18px;
+    margin-left: 0;
+  }
 }
 
+@media (max-width: 790px) {
+  .about .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
 
-@media(max-width: 420px){
+  .about .about-content .left {
+    /* width:100%; */
+    height: fit-content;
+  }
+  .about .about-content .right {
+    width: 100%;
+    object-fit: cover;
+  }
 
-    .home .home-content .name{
-        font-size: 30px;
-    }
+  .projects .project-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .projects .project-content .card {
+    margin: 50px auto;
+    width: 100%;
+  }
 
-    .home .home-content a{
-        font-size: 23px;
-        padding: 10px 18px;
-    }
+  .projects .project-content .card .links {
+    justify-content: space-evenly;
+  }
 
-    .home .home-content .name{
-        font-size: 30px;
-    }
+  .projects .project-content .card img {
+    width: 70vw;
+  }
 
-    .home .home-content a{
-        font-size: 15px;
-        padding: 10px 18px;
-        margin-left: 0;
-    }
+  .skill .skill-content{
+    flex-direction: column;
+    
+  }
 
-    .about .about-content .left img{
-        height: 200px;
-        width:200px;
-        object-fit: cover;
-    }
-    .menu-btn{
-        color: #fff;
-    }
+  .skill .skill-content .column{
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .home .home-content .name {
+    font-size: 30px;
+  }
+
+  .home .home-content a {
+    font-size: 23px;
+    padding: 10px 18px;
+  }
+
+  .home .home-content .name {
+    font-size: 30px;
+  }
+
+  .home .home-content a {
+    font-size: 15px;
+    padding: 10px 18px;
+    margin-left: 0;
+  }
+
+  .about .about-content .left img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+  .menu-btn {
+    color: #fff;
+  }
 }
