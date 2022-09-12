@@ -310,7 +310,7 @@ text-align: justify;
 display: flex;
 align-items: center;
 justify-content: space-between;
-margin-bottom: 15px;
+margin-top: 15px;
 }
 
 .skill .skill-content .column .bars .info span{
