@@ -549,12 +549,15 @@ margin-top: 15px;
 
  footer{
   background: #333;
-  height: 100px;
+  height: 80px;
   font-size: 60px;
   font-family: "Smooch", cursive;
   text-align: center;
   color: #fff;
   font-weight: lighter;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 
