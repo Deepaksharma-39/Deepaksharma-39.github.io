@@ -30,7 +30,7 @@ $(document).ready(function(){
 
     // typing animation
     let typed=new Typed(".typing",{
-        strings: ["JavaScript","Java", "HTML", "CSS", "Git"],
+        strings: ["JavaScript","Java", "HTML", "CSS", "Git", "SQL", "AWS"],
         typeSpeed: 100,
         backSpeed: 90,
         loop:true

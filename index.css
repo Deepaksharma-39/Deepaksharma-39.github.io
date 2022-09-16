@@ -211,9 +211,13 @@ section .title {
   width: 45%;
 }
 .about .about-content .left img {
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
   object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: crimson;
 }
 
 .about .about-content .right {
@@ -556,8 +560,9 @@ margin-top: 15px;
   color: #fff;
   font-weight: lighter;
   position: relative;
-  bottom: 0;
-  width: 100%;
+  margin-bottom: -10px;
+  padding-bottom: 0;
+  border: 2px solid black;
 }
 
 
@@ -673,8 +678,12 @@ margin-top: 15px;
   }
 
   .about .about-content .left {
-    /* width:100%; */
+    width:100%;
     height: fit-content;
+  }
+  .about .about-content .left img{
+    display: block;
+    margin: auto;
   }
   .about .about-content .right {
     width: 100%;
