@@ -252,18 +252,38 @@ section .title {
 /* project */
 
 .projects {
-  color: #fff;
-  background: black;
+  color: black;
+  background: transparent;
 }
 
 .projects .project-content {
   display: flex;
-  margin-top: 50px;
+  flex-direction: column;
+ 
   justify-content: space-between;
 }
 
 .projects .project-content .card {
-  width: 40vw;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.projects .project-content .tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  margin-top: 2%;
+}
+
+.projects .project-content .tech div{
+font-size: 18px;
+margin-left: 20px;
 }
 
 .projects .project-content .card .img {
@@ -273,26 +293,35 @@ section .title {
   margin-bottom: 25px;
 }
 
-.projects .project-content .card .img:hover {
-  transform: scale(1.1);
+.projects .project-content .card .body{
+  width: 20%;
+  font-family: "Heebo", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
 }
 
+
+
+/* .projects .project-content .card .img:hover {
+  transform: scale(1.1);
+} */
+
 .projects .project-content .card img {
-  height: 250px;
-  width: 30vw;
+  width: 65vw;
+  height: 60vh;
   object-fit: cover;
 }
 
 .projects .project-content .card .text {
   font-family: "Ubuntu", sans-serif;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   margin: 10px auto;
 }
 
 .projects .project-content .card p {
   text-align: justify;
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Heebo", sans-serif;
 }
 
@@ -301,20 +330,23 @@ section .title {
   justify-content: space-evenly;
   width: 60%;
   margin: auto;
+  margin-bottom: 30px;
+
 }
 
 .projects .project-content .card .pro-btn {
   display: inline-block;
   background: crimson;
   color: #fff;
-  padding: 13px 24px;
+  padding: 6px 12px;
   margin-top: 20px;
   margin-left: 12px;
   border-radius: 8px;
   border: 2px solid crimson;
   font-family: "Ubuntu", sans-serif;
   margin-left: 0;
-  font-size: 16px;
+  font-size: 18px;
+  margin-left: 10px;
 }
 
 .projects .project-content .card .pro-btn:hover {
@@ -404,7 +436,7 @@ margin-top: 15px;
     width: 90%;
 }
 .skill .skill-content .column .bars .rwork::before{
-    width: 80%;
+    width: 99%;
 }
 
 .skill .skill-content .column .bars .proactive::before{
@@ -418,6 +450,89 @@ margin-top: 15px;
 .skill .skill-content .column .bars .TM::before{
     width: 90%;
 }
+
+
+.stat{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.stat .box{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat .box .hours{
+  width:150px ;
+  height: 150px;
+  border: 18px solid crimson;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+
+
+
+/* skill popupbutton */
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: grey;
+  transform: translate(-50%, -90%);
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 50%;
+  max-width: 80%;
+
+}
+.modal-header{
+  padding: 8px 12px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid#333;
+}
+
+
+.modal-header .title{
+  display: flex;
+  align-items: center;
+  padding: 8px 0 8px 0;
+}
+.modal-header .close-button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.modal .modal-body{
+  padding: 8px 13px;
+}
+
+/* #overlay{
+  /* position: fixed; */
+
+
+
+
+
+
+
 
 .contact .contact-content {
   display: flex;
@@ -559,7 +674,7 @@ margin-top: 15px;
   text-align: center;
   color: #fff;
   font-weight: lighter;
-  position: relative;
+  /* position: relative; */
   margin-bottom: -10px;
   padding-bottom: 0;
   border: 2px solid black;
@@ -567,7 +682,9 @@ margin-top: 15px;
 
 
 
-
+.calendar{
+  max-width: 80vw;
+}
 
 
 
@@ -589,6 +706,22 @@ margin-top: 15px;
     font-size: 20px;
     font-family: "Heebo", sans-serif;
   }
+
+  .projects .project-content .card .text {
+    
+    font-size: 20px;
+  
+  }
+
+  /* .stat{
+    grid-template-columns: repeat(3, 1fr);
+  } */
+  .stat .box .hours{
+    height: 100px;
+    width: 100px;
+    border: 10px solid crimson;
+    font-size: 25px;
+  }
 }
 @media (max-width: 900px) {
   .max-width {
@@ -596,6 +729,8 @@ margin-top: 15px;
     padding: 0 15px;
     margin: auto;
   }
+
+  
 
   .menu-btn {
     font-size: 23px;
@@ -664,6 +799,19 @@ margin-top: 15px;
     margin-left: 0;
   }
 
+  .projects .project-content .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects .project-content .card img {
+    width: 70vw;
+    height: 60vh;
+  }
+
+  .projects .project-content .card .body{
+    width: 100%;
+  }
   .projects .project-content .card .pro-btn {
     font-size: 15px;
     padding: 10px 18px;
@@ -690,7 +838,7 @@ margin-top: 15px;
     object-fit: cover;
   }
 
-  .projects .project-content {
+  .projects .project-content .card {
     display: flex;
     flex-direction: column;
   }
@@ -701,6 +849,10 @@ margin-top: 15px;
 
   .projects .project-content .card .links {
     justify-content: space-evenly;
+  }
+
+  .projects .project-content .card .body{
+    width: 100%;
   }
 
   .projects .project-content .card img {
@@ -716,6 +868,10 @@ margin-top: 15px;
     width: 100%;
   }
 
+  .stat{
+   grid-template-columns: repeat(4,1fr); 
+  }
+
   .contact .contact-content{
     flex-direction: column;
     
@@ -724,12 +880,24 @@ margin-top: 15px;
   .contact .contact-content .column{
     width: 100%;
   }
+
+  .calendar{
+    width: 80vw;
+  }
+}
+
+@media (max-width: 520px){
+  .stat{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 420px) {
   .home .home-content .name {
     font-size: 30px;
   }
+
+ 
 
   .home .home-content a {
     font-size: 23px;
