@@ -227,8 +227,9 @@ section .title {
 
 .about .about-content .right .text {
   font-size: 30px;
-  font-family: "Heebo", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   margin-bottom: 10px;
+  text-align: center;
 }
 .about .about-content .right span {
   color: crimson;
@@ -238,17 +239,34 @@ section .title {
 
 .about .about-content .right p {
   text-align: justify;
-  font-family: "Heebo", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 10px;
 }
 
 .about .about-content .right a {
   display: inline-block;
   color: crimson;
-  font-family: "Heebo", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+.about .about-content .right a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  padding: 13px 24px;
+  margin-top: 20px;
+  margin-left: 12px;
+  border-radius: 8px;
+  border: 2px solid crimson;
+  font-family: "Ubuntu", sans-serif;
+  margin-left: 0;
 }
 
+.about .about-content .right a:hover {
+  color: crimson;
+  background: none;
+}
 /* project */
 
 .projects {
@@ -283,6 +301,7 @@ section .title {
 
 .projects .project-content .tech div{
 font-size: 18px;
+font-weight: 700;
 margin-left: 20px;
 }
 
@@ -469,7 +488,7 @@ margin-top: 15px;
 .stat .box .hours{
   width:150px ;
   height: 150px;
-  border: 18px solid crimson;
+  border: 18px solid rgba(220, 20, 60, 0.473);
   border-radius: 50%;
   display: flex;
   justify-content: center;
