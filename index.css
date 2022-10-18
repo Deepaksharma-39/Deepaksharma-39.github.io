@@ -297,6 +297,11 @@ section .title {
   gap: 10px;
   width: 100%;
   margin-top: 2%;
+ 
+}
+
+.projects .project-content .tech div i{
+  font-weight: 700;
 }
 
 .projects .project-content .tech div{
@@ -372,6 +377,8 @@ margin-left: 20px;
   color: crimson;
   background: none;
 }
+
+.tech
 
 
 .skill .skill-content p{
