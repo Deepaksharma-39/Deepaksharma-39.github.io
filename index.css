@@ -247,25 +247,33 @@ section .title {
 
 .about .about-content .right a {
   display: inline-block;
+  align-items: center;
   color: crimson;
   font-family: "Ubuntu", sans-serif;
+  justify-content: space-between;
 }
 .about .about-content .right a {
-  display: inline-block;
-  background: crimson;
-  color: #fff;
-  padding: 13px 24px;
+  /* display: inline-block; */
+  /* background: crimson; */
+  /* color: #fff; */
+  padding: 10px 20px;
+  margin: auto;
   margin-top: 20px;
-  margin-left: 12px;
+  color: #333;
   border-radius: 8px;
-  border: 2px solid crimson;
+  /* border: 2px solid black; */
   font-family: "Ubuntu", sans-serif;
-  margin-left: 0;
+  /* margin-ri: aut; */
+  margin-right: 10px;
+  font-size: 20px;
 }
+
 
 .about .about-content .right a:hover {
   color: crimson;
   background: none;
+  border: 2px solid crimson;
+  scale: 1.1;
 }
 /* project */
 
@@ -387,20 +395,47 @@ text-align: justify;
   font-family: "Heebo", sans-serif;
   font-weight: bold;
 }
-
+/* .skill .skill-content{
+  display: flex;
+  flex-direction: column;
+} */
 .skill .skill-content .column {
-  width: calc(50% - 50px);
   font-family: "Ubuntu", sans-serif;
   text-align: center;
   margin: 30px auto;
 }
 
+
 .skill .skill-content .column .text{
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-size: 25px;
 }
 
-.skill .skill-content .column .bars{
+.skill .skill-content .column .tech{
+  display: grid;
+  grid-template-columns: repeat(6,2fr); 
+  gap: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
+}
+.skill .skill-content .column .cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.skill .skill-content .column .cards span{
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.skill .skill-content .column .cards img{
+  width: 150px;
+  height: 150px;
+}
+
+/* .skill .skill-content .column .bars{
     text-align: justify;
   font-size: 16px;
   font-family: "Heebo", sans-serif;
@@ -475,7 +510,7 @@ margin-top: 15px;
 
 .skill .skill-content .column .bars .TM::before{
     width: 90%;
-}
+} */
 
 
 .stat{
@@ -741,6 +776,11 @@ margin-top: 15px;
     font-size: 20px;
   
   }
+  .skill .skill-content .column .tech{
+    display: grid;
+    grid-template-columns: repeat(5,2fr); 
+    gap: 10px;
+  }
 
   /* .stat{
     grid-template-columns: repeat(3, 1fr);
@@ -859,6 +899,16 @@ margin-top: 15px;
     align-items: center;
   }
 
+  .skill .skill-content .column .tech{
+    display: grid;
+    grid-template-columns: repeat(3,2fr); 
+    gap: 10px;
+  }
+
+  .skill .skill-content .column .cards img{
+    width: 100px;
+    height: 100px;
+  }
   .about .about-content .left {
     width:100%;
     height: fit-content;
@@ -924,6 +974,31 @@ margin-top: 15px;
   .stat{
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .skill .skill-content .column .tech{
+    display: grid;
+    grid-template-columns: repeat(2,1fr); 
+    gap: 10px;
+  }
+  .skill .skill-content .column .cards img{
+    width: 100px;
+    height: 100px;
+  }
+
+  .projects .project-content .card .pro-btn {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    padding: 3px 6px;
+    margin-top: 20px;
+    margin-left: 12px;
+    border-radius: 8px;
+    border: 2px solid crimson;
+    font-family: "Ubuntu", sans-serif;
+    margin-left: 0;
+    font-size: 14px;
+    margin-left: 10px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -954,6 +1029,6 @@ margin-top: 15px;
     object-fit: cover;
   }
   .menu-btn {
-    color: #fff;
+    color: crimson;
   }
 }

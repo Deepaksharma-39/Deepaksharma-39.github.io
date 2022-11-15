@@ -1,3 +1,12 @@
+document.getElementById("resume1").addEventListener("click",()=>{
+    window.open("https://drive.google.com/file/d/1wdZQBPUXc2S2EbuchucyKvKpRD0VFdnV/view?usp=share_link",'_blank')
+  })
+
+  document.getElementById("resume2").addEventListener("click",()=>{
+    window.open("https://drive.google.com/file/d/1wdZQBPUXc2S2EbuchucyKvKpRD0VFdnV/view?usp=share_link",'_blank')
+  })
+
+
 $(document).ready(function(){
     $(window).scroll(function(){
         if(this.scrollY>20){
