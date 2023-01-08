@@ -130,27 +130,21 @@
 
 .home .home-content .hello {
   font-size: 50px;
-  font-family: "Smooch", cursive;
+  /* font-family: "Smooch", cursive; */
   margin-top: 50px;
 }
 
 .home .home-content .name {
-  font-size: 60px;
-  font-family: "Ubuntu", sans-serif;
+  font-size: 40px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 700;
+  color: #212121;
+  line-height: 54px;
   margin-left: -3px;
 }
 
-.home .home-content .about {
-  font-size: 40px;
-  font-family: "Smooch", cursive;
-  margin: 5px 0;
-}
 
-.home .home-content .mini-intro {
-  font-size: 40px;
-  font-family: "Smooch", cursive;
-  margin: 5px 0;
-}
+
 
 .home .home-content .mini-intro span {
   color: crimson;
@@ -201,12 +195,16 @@ section .title {
  {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   padding-top: 30px;
   font-family: "Ubuntu", sans-serif;
 }
 
+/* .about .about-content{
+  border: 1px solid red;
+  
+} */
 .about .about-content .left {
   width: 45%;
 }
@@ -221,8 +219,17 @@ section .title {
 }
 
 .about .about-content .right {
-  width: 55%;
+  width: 40%;
   object-fit: cover;
+  padding: 10px 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  padding: 2px;
+  -webkit-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    top: 37px;
+    left: -43px;
+    position: relative;
 }
 
 .about .about-content .right .text {
@@ -259,7 +266,7 @@ section .title {
   padding: 10px 20px;
   margin: auto;
   margin-top: 20px;
-  color: #333;
+  color: #212121;
   border-radius: 8px;
   /* border: 2px solid black; */
   font-family: "Ubuntu", sans-serif;
@@ -278,7 +285,7 @@ section .title {
 /* project */
 
 .projects {
-  color: black;
+  color: #212121;
   background: transparent;
 }
 
@@ -305,6 +312,7 @@ section .title {
   gap: 10px;
   width: 80%;
   margin-top: 2%;
+  /* border: 1px saddlebrown; */
  
 }
 
@@ -324,7 +332,8 @@ margin-left: 20px;
   justify-content: center;
   cursor: pointer;
   margin-bottom: 25px;
-  border: 1px solid;
+  /* object-fit: cover; */
+  /* border: 1px solid; */
   
 }
 
@@ -333,7 +342,7 @@ margin-left: 20px;
   font-family: "Heebo", sans-serif;
   font-size: 15px;
   font-weight: bold;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 

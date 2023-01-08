@@ -39,7 +39,7 @@ $(document).ready(function(){
 
     // typing animation
     let typed=new Typed(".typing",{
-        strings: ["Java","SpringBoot","MySQL", "REST Api's","JavaScript","HTML","CSS"],
+        strings: ["Deepak Sharma","Web Developer","Backend Developer"],
         typeSpeed: 100,
         backSpeed: 90,
         loop:true
