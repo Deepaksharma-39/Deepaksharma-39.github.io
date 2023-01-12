@@ -223,13 +223,13 @@ section .title {
   object-fit: cover;
   padding: 10px 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  padding: 2px;
-  -webkit-transform: rotate(-2deg);
+  padding: 20px;
+  /* -webkit-transform: rotate(-2deg);
     -ms-transform: rotate(-2deg);
     transform: rotate(-2deg);
     top: 37px;
     left: -43px;
-    position: relative;
+    position: relative; */
 }
 
 .about .about-content .right .text {
