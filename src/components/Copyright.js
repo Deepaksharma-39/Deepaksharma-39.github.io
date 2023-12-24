@@ -8,7 +8,7 @@ const Copyright = () => {
               <p>
                 Developed by{" "}
                 <a
-                  href="https://themeforest.net/user/codeefly"
+                  href="3"
                   rel="noreferrer"
                   target="_blank"
                 >
