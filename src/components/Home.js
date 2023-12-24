@@ -4,7 +4,7 @@ const homeData = {
   firstName: "Deepak",
   lastName: "Sharma",
   designation: "Full stack Web Developer",
-  address: "Delhi, India",
+  address: "NCR, India",
   img: "img/about/1.webp",
   bio: "Elevate Your Online Presence with Expert Solutions",
   numberOfProject: 30,
