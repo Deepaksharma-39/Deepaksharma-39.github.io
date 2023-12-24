@@ -1,0 +1,67 @@
+@import "../public/css/plugins.css";
+@import "../public/css/dark.css";
+@import "../public/css/style.css";
+
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/scrollbar";
+@import "swiper/css/effect-fade";
+
+html {
+  scroll-behavior: smooth;
+}
+.c-pointer {
+  cursor: pointer;
+}
+.d-block {
+  display: block !important;
+}
+.acc_active .acc_content.d-block {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
+.swiper-pagination-bullet {
+  opacity: 1;
+}
+
+.owl-dots.swiper-pagination-bullets {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+}
+.devman_tm_testimonials
+  .owl-theme
+  .owl-dots
+  .swiper-pagination-bullet-active:before {
+  content: "";
+  border: 2px solid var(--main-color);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  width: 22px;
+  display: block;
+  height: 22px;
+  margin-top: -5px;
+  margin-left: -4.5px;
+  transition: all 0.5s ease;
+}
+.devman_tm_contact .devman_tm_button a,
+.devman_tm_contact .devman_tm_button input {
+  text-transform: none;
+  color: #fff;
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--font-family-extra);
+  transition: all 0.3s ease;
+  height: unset;
+  width: 100%;
+}
