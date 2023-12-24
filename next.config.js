@@ -5,4 +5,4 @@ const nextConfig = {
 
 
 
-module.exports = { assetPrefix: '.',nextConfig }
+module.exports = { nextConfig }
