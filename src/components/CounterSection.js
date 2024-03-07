@@ -2,8 +2,8 @@ import { lineBreak } from "../utilits";
 import Counter from "./Counter";
 
 const counterData = [
-  { smallVlaue: true, value: 30, name: "Digital\nProducts" },
-  { smallVlaue: true, value:3, name: "Open Source\nProjects" },
+  { smallVlaue: true, value: 15, name: "Digital\nProducts" },
+  { smallVlaue: true, value:2, name: "HRM \nProjects" },
   { smallVlaue: false, value: 1, name: "Lines of \nCode" },
 ];
 const CounterSection = () => {

@@ -38,7 +38,7 @@ const Header = () => {
               </li>
               
               <li className="download_cv">
-                <a href="/img/Deepak-Sharma-Resume.jpg" download={true}>
+                <a href="./img/Deepak-Sharma-Resume.pdf" download={true}>
                   Download CV
                 </a>
               </li>

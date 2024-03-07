@@ -8,7 +8,7 @@ const homeData = {
   img: "img/about/1.webp",
   bio: "Elevate Your Online Presence with Expert Solutions",
   numberOfProject: 30,
-  numberofyear: 2,
+  numberofyear: 1,
 };
 
 const Home = () => {
@@ -59,9 +59,9 @@ const Home = () => {
                       <Counter end={homeData.numberofyear} />
                     </h3>
                     <span className="item_name">
-                      Years of
+                      Year of
                       <br />
-                      Success
+                      Development
                     </span>
                   </div>
                 </div>
