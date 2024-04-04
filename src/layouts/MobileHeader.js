@@ -47,13 +47,11 @@ const MobileHeader = () => {
             <li>
               <a href="#contact">Contact</a>
             </li>
-            <li>
-              <a href="#blog">Blog</a>
-            </li>
+          
             <li className="download_cv">
-              <a href="img/cv/1.jpg" download>
-                Download CV
-              </a>
+              <a target="blank" href="https://drive.google.com/file/d/1IozLO854DqbyCFhLD0O1gvwOZH96QoGZ/view?usp=sharing" download={true}>
+                  View CV
+                </a>
             </li>
           </ul>
         </div>
