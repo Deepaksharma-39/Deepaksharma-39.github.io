@@ -27,13 +27,13 @@ const Home = () => {
                   {homeData.firstName} {homeData.lastName}
                 </h3>
                 <h3 className="job">
-                  {homeData.designation} from {homeData.address}
+                  {homeData.designation}
                 </h3>
-                <p className="text">{homeData.bio}</p>
+                {/* <p className="text">{homeData.bio}</p> */}
                 <div className="buttons">
                   <div className="devman_tm_button">
                     <a className="anchor" href="#contact">
-                      Get a Quote
+                      Contact
                     </a>
                   </div>
                   <div className="simple_button">
