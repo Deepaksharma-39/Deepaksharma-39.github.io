@@ -30,13 +30,13 @@ const Index = () => {
       <MobileHeader />
       <Header />
       <Home />
-      <Features />
+      {/* <Features /> */}
       <About />
       <CounterSection />
       <Portfolio />
       <Skills />
       <Service />
-      <Process />
+      {/* <Process /> */}
       {/* <Testimonials /> */}
       {/* <Partners /> */}
       <Contact />
