@@ -1,21 +1,29 @@
 const aboutData = {
-  designation: "Developer",
-  title: "I Develop Application that Help People",
+  name: "[Your Name]",
+  designation: "Full Stack Developer",
+  title: "Embarking on a Journey to Develop Helpful Applications",
   text: [
-    "Crafting applications that make a difference. My work is driven by a passion for creating solutions that truly help people.",
-    "Innovation is my compass, guiding me to build applications that seamlessly blend functionality with user experience. Let's turn ideas into impactful realities.",
+    "Results-driven and versatile Full Stack Developer, adept in all stages of web development, With a comprehensive understanding of user interface, testing, and debugging processes, exceling in delivering top-notch solutions.",
+    "Viewing innovation as an exciting adventure, guiding to explore and build applications that seamlessly blend functionality with user experience. With an ultimate goal to turn newfound knowledge into impactful realities.",
+  ],
+  skillSet: [
+    { name: "Java", level: "Intermediate" },
+    { name: "React", level: "Intermediate" },
+    { name: "JavaScript", level: "Intermediate" },
+    { name: "Database", level: "Intermediate" },
   ],
   skillIcons: [
-    { name: "java", icon: "img/svg/java.svg" },
-    { name: "react", icon: "img/svg/react.svg" },
-    { name: "Javascript", icon: "img/svg/javascript.svg" },
-    { name: "database", icon: "img/svg/database.svg" },
+    { name: "Java", icon: "img/svg/java.svg" },
+    { name: "React", icon: "img/svg/react.svg" },
+    { name: "JavaScript", icon: "img/svg/javascript.svg" },
+    { name: "Database", icon: "img/svg/database.svg" },
   ],
 };
 
+
 const About = () => {
   return (
-    <div className="devman_tm_section" id="about">
+    <div className="devman_tm_section" id="about" style={{"padding-top":"90px"}}>
       <div className="devman_tm_about">
         <div className="container">
           <div className="about_inner">
@@ -48,7 +56,7 @@ const About = () => {
             <div className="right">
               <div className="title">
                 <span>
-                  {`I'm`} a {aboutData.designation}
+                {aboutData.designation}
                 </span>
                 <h3>{aboutData.title}</h3>
               </div>
@@ -59,7 +67,7 @@ const About = () => {
               </div>
               <div className="devman_tm_button">
                 <a className="anchor" href="#portfolio">
-                  View Portfolio
+                  View Projects
                 </a>
               </div>
             </div>
