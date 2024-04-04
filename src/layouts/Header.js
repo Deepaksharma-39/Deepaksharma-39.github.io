@@ -38,8 +38,8 @@ const Header = () => {
               </li>
               
               <li className="download_cv">
-                <a href="./img/Deepak-Sharma-Resume.pdf" download={true}>
-                  Download CV
+                <a target="blank" href="https://drive.google.com/file/d/1IozLO854DqbyCFhLD0O1gvwOZH96QoGZ/view?usp=sharing" download={true}>
+                  View CV
                 </a>
               </li>
             </ul>
