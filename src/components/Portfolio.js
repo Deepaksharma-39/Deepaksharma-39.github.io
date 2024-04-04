@@ -6,11 +6,11 @@ const Portfolio = () => {
   return (
     <Fragment>
       <DetailsPopup open={popup} close={() => setPopup(false)} />
-      <div className="devman_tm_section" id="portfolio">
+      <div className="devman_tm_section" id="portfolio" style={{"padding-top":"90px"}}>
         <div className="devman_tm_portfolio">
           <div className="container">
             <div className="devman_tm_main_title" data-text-align="center">
-              <span>Portfolio</span>
+              <span>Projects</span>
               <h3>My Amazing Works</h3>
               <p>
               Explore a showcase of my exceptional works that speak volumes about my dedication to excellence. Each project is a testament to my passion for creating meaningful digital experiences.
