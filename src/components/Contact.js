@@ -44,12 +44,12 @@ const Contact = () => {
     }, 2000);
   };
   return (
-    <div className="devman_tm_section" id="contact">
+    <div className="devman_tm_section" id="contact" style={{"padding-top":"90px"}}>
       <div className="devman_tm_contact">
         <div className="container">
           <div className="contact_inner">
             <div className="devman_tm_main_title" data-text-align="left">
-              <span>{`Don't`} be shy</span>
+              <span>Contact Me</span>
               <h3>Drop Me a Line</h3>
             </div>
             <div className="in">
