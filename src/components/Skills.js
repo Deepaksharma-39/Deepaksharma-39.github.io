@@ -7,7 +7,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <div className="devman_tm_section">
+    <div className="devman_tm_section" id="skills" style={{"padding-top":"90px"}}> 
       <div className="devman_tm_skills">
         <div className="container">
           <div className="devman_tm_main_title" data-text-align="center">
@@ -75,7 +75,7 @@ const Skills = () => {
                   data-color="#142eb5"
                 >
                   <span>
-                    <span className="label">Wordpress</span>
+                    <span className="label">MySQL</span>
                     <span className="number">70%</span>
                   </span>
                   <div className="background">
@@ -90,7 +90,7 @@ const Skills = () => {
                   data-color="#142eb5"
                 >
                   <span>
-                    <span className="label">PHP</span>
+                    <span className="label">Node.js</span>
                     <span className="number">80%</span>
                   </span>
                   <div className="background">
@@ -105,7 +105,7 @@ const Skills = () => {
                   data-color="#142eb5"
                 >
                   <span>
-                    <span className="label">DBMS</span>
+                    <span className="label">MongoDB</span>
                     <span className="number">60%</span>
                   </span>
                   <div className="background">
