@@ -1,16 +1,18 @@
 import { Fragment, useState } from "react";
 import DetailsPopup from "./popup/DetailsPopup";
+import { countryard, necc, sewakTravels } from "./popup/projectData";
 
 const Portfolio = () => {
   const [popup, setPopup] = useState(false);
+  const [data,setData]=useState({});
   return (
     <Fragment>
-      <DetailsPopup open={popup} close={() => setPopup(false)} />
-      <div className="devman_tm_section" id="portfolio" style={{"padding-top":"90px"}}>
+      <DetailsPopup data={data} open={popup} close={() => setPopup(false)} />
+      <div className="devman_tm_section" id="project" style={{"paddingTop":"90px"}}>
         <div className="devman_tm_portfolio">
           <div className="container">
             <div className="devman_tm_main_title" data-text-align="center">
-              <span>Projects</span>
+              <span>Portfolio</span>
               <h3>My Amazing Works</h3>
               <p>
               Explore a showcase of my exceptional works that speak volumes about my dedication to excellence. Each project is a testament to my passion for creating meaningful digital experiences.
@@ -18,6 +20,8 @@ const Portfolio = () => {
             </div>
             <div className="portfolio_list">
               <ul>
+
+
                 <li className="wow fadeInUp" data-wow-duration="1s">
                   <div className="list_inner">
                     <div
@@ -27,29 +31,62 @@ const Portfolio = () => {
                     <div className="content">
                       <div className="details">
                         <span className="category">
-                          <a href="https://new.sewaktravels.com" target="blank">Cab Booking website</a>
+                          <a href="https://sewaktravels.com/" target="blank">Cab Booking website</a>
                         </span>
                         <h3 className="title">
-                          <a href="https://new.sewaktravels.com" target="blank">
+                          <a href="https://sewaktravels.com/" target="blank">
                             Web Application for
                             <br /> Sewak travels
                           </a>
                         </h3>
                         <span className="view_project">
-                          <a href="https://new.sewaktravels.com" target="blank">
-                            View Project <i className="icon-right-big" />
+                          <a href="https://github.com/TechPlek-Technologies/SewakTravels">
+                            View project <i className="icon-right-big" />
                           </a>
                         </span>
                       </div>
                     </div>
                     <div className="overlay" />
                     <a
-                    target="blank"
-                      className="devman_tm_full_link popup-youtube"
-                      href="https://new.sewaktravels.com"
+                      className="devman_tm_full_link portfolio_popup c-pointer"
+                      onClick={() => {setPopup(true);setData(sewakTravels)}}
                     />
                   </div>
                 </li>
+
+                <li className="wow fadeInUp" data-wow-duration="1s">
+                  <div className="list_inner">
+                    <div
+                      className="background_image"
+                      data-img-url="/img/portfolio/necc/cover.JPG"
+                    />
+                    <div className="content">
+                      <div className="details">
+                        <span className="category">
+                          <a href="http://ucs.fbp.mybluehostin.me/" target="blank">Logistics Website</a>
+                        </span>
+                        <h3 className="title">
+                          <a href="http://ucs.fbp.mybluehostin.me/" target="blank">
+                            Web App for
+                            <br />NECC Logistics
+                          </a>
+                        </h3>
+                        <span className="view_project">
+                          <a href="https://github.com/TechPlek-Technologies/NECC">
+                            View project <i className="icon-right-big" />
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <div className="overlay" />
+                    <a
+                      className="devman_tm_full_link portfolio_popup c-pointer"
+                      onClick={() => {setPopup(true);setData(necc)}}
+                    />
+                  </div>
+                </li>
+
+
                 <li className="wow fadeInUp" data-wow-duration="1s">
                   <div className="list_inner">
                     <div
@@ -76,13 +113,12 @@ const Portfolio = () => {
                     </div>
                     <div className="overlay" />
                     <a
-                      className="devman_tm_full_link popup-vimeo"
-                      href="https://countryard.com/"
-                      target="blank"
+                      className="devman_tm_full_link portfolio_popup c-pointer"
+                      onClick={() => {setPopup(true);setData(countryard)}}
                     />
                   </div>
                 </li>
-                <li className="wow fadeInUp" data-wow-duration="1s">
+                {/* <li className="wow fadeInUp" data-wow-duration="1s">
                   <div className="list_inner">
                     <div
                       className="background_image"
@@ -118,7 +154,6 @@ const Portfolio = () => {
                     <div
                       className="background_image"
                       data-img-url="img/portfolio/4.png"
-                      style={{ filter: "invert(50)" }}
                     />
                     <div className="content">
                       <div className="details">
@@ -140,11 +175,10 @@ const Portfolio = () => {
                     <div className="overlay" />
                     <a
                       className="devman_tm_full_link portfolio_popup c-pointer"
-                      // onClick={() => setPopup(true)}
-                      href="https://github.com/Deepaksharma-39/phpHRM"
+                      onClick={() => {setPopup(true);setData(sewakTravels)}}
                     />
                   </div>
-                </li>
+                </li> */}
                 <div
                   className="shape_1 moving_effect"
                   data-direction="y"
