@@ -1,4 +1,6 @@
 import Popup from "./Popup";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LanguageIcon from '@mui/icons-material/Language';
 const DetailsPopup = ({ open, close,data }) => {
   return (
     <Popup open={open} close={close}>
@@ -28,12 +30,21 @@ const DetailsPopup = ({ open, close,data }) => {
           </div>
           <div className="detailbox ">
             <ul>
-              <li>
+              <li style={{display:"flex",gap:'10px'}}>
+
+                <span>
+                <a style={{ color:" var(--main-color)"}} target="blank" href={data.liveSrc}> <LanguageIcon/></a>
+                 
+                </span>
                 <span>
                   <a style={{ color:" var(--main-color)"}} target="blank" href={data.liveSrc}>Live</a>
                 </span>
               </li>
-              <li>
+              <li style={{display:"flex",gap:'10px'}}>
+
+                <span>
+                <a style={{ color:" var(--main-color)"}} target="blank" href={data.githubSrc}><GitHubIcon/></a>
+                </span>
                 <span>
                   <a style={{ color:" var(--main-color)"}} target="blank" href={data.githubSrc}>Github</a>
                 </span>
