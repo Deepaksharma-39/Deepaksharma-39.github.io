@@ -8,7 +8,7 @@ const MobileHeader = () => {
         <div className="mobile_in">
           <div className="logo">
             <a href="#">
-              <img src="img/logo/logo.png" alt="" />
+              <img src="img/logo/dark-logo.png" alt="" />
             </a>
           </div>
           <div className="trigger">
