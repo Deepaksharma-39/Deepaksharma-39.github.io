@@ -25,7 +25,7 @@ const Index = () => {
   return (
     <Layout>
       <Head>
-        <title> Home</title>
+        <title> Deepak's Portfolio</title>
       </Head>
       <MobileHeader />
       <Header />
