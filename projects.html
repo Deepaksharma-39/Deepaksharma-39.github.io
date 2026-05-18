@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Deepak Sharma</title>
+  <meta name="description" content="Live deployed projects — cab booking platforms, logistics tracking, e-commerce, hospitality booking, AI agents, and more. Built by Deepak Sharma." />
+  <meta name="keywords" content="Deepak Sharma Projects, Sewak Travels, BDA Carriers, NECC Group, Countryard, Vita Vista, Full Stack Portfolio" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Projects — Deepak Sharma" />
+  <meta property="og:description" content="Live deployed systems — mobility, logistics, hospitality, e-commerce, and AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#0d1117; --bg-2:#161b22; --bg-3:#1c2128; --bg-4:#21262d;
+      --bd:rgba(48,54,61,0.85); --bd-s:rgba(48,54,61,0.45);
+      --fg:#e6edf3; --fg-2:#8b949e; --fg-3:#6e7681; --fg-4:#484f58;
+      --blue:#2f81f7; --blue-s:rgba(47,129,247,0.1); --blue-b:rgba(47,129,247,0.3);
+      --green:#3fb950; --green-s:rgba(63,185,80,0.1); --green-b:rgba(63,185,80,0.3);
+      --orange:#f0883e; --orange-s:rgba(240,136,62,0.1);
+      --purple:#bc8cff; --purple-s:rgba(188,140,255,0.1); --purple-b:rgba(188,140,255,0.3);
+      --yellow:#d29922; --red:#f85149;
+      --r4:4px; --r6:6px; --r8:8px; --r12:12px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:14px}
+    body{background:var(--bg);color:var(--fg);font-family:'Inter',-apple-system,system-ui,sans-serif;font-size:14px;line-height:1.6;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+
+    #starfield{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.7}
+    .glow-top{position:fixed;top:0;left:0;right:0;height:300px;z-index:1;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% -5%,rgba(47,129,247,0.06) 0%,transparent 70%)}
+
+    /* NAV */
+    .nav-wrap{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(13,17,23,0.9);backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid var(--bd)}
+    nav{max-width:1280px;margin:0 auto;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 24px}
+    .nav-brand{display:flex;align-items:center;gap:10px}
+    .nav-avatar{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#2f81f7,#7c3aed);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:#fff}
+    .nav-name{font-size:14px;font-weight:600;color:var(--fg);letter-spacing:-0.2px}
+    .nav-sep{width:1px;height:18px;background:var(--bd);margin:0 4px}
+    .nav-links-row{display:flex;gap:2px}
+    .nav-link{padding:5px 12px;border-radius:var(--r6);font-size:13px;font-weight:500;color:var(--fg-2);transition:all 0.15s}
+    .nav-link:hover{color:var(--fg);background:var(--bg-3)}
+    .nav-link.active{color:var(--fg)}
+    .nav-right{display:flex;align-items:center;gap:10px}
+    .nav-btn{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:var(--r6);font-size:13px;font-weight:500;border:1px solid;transition:all 0.15s}
+    .nb-ghost{color:var(--fg-2);border-color:var(--bd);background:var(--bg-3)}
+    .nb-ghost:hover{color:var(--fg);border-color:rgba(255,255,255,0.15)}
+    .nb-primary{color:#fff;border-color:rgba(255,255,255,0.12);background:var(--blue)}
+    .nb-primary:hover{background:#388bfd}
+
+    /* PAGE HEADER */
+    .page-header{position:relative;z-index:10;border-bottom:1px solid var(--bd);background:var(--bg-2)}
+    .ph-inner{max-width:1280px;margin:0 auto;padding:80px 24px 32px}
+    .back-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--fg-2);margin-bottom:20px;transition:color 0.15s}
+    .back-btn:hover{color:var(--blue)}
+    .ph-kicker{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.8px;color:var(--blue);margin-bottom:8px}
+    .ph-kicker-dot{width:6px;height:6px;border-radius:50%;background:var(--blue)}
+    .ph-h1{font-size:clamp(24px,3.5vw,40px);font-weight:700;letter-spacing:-1px;color:var(--fg);margin-bottom:8px}
+    .ph-desc{font-size:14px;color:var(--fg-2);max-width:540px;line-height:1.65}
+    .ph-meta{margin-top:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .ph-meta-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--fg-3);font-family:'JetBrains Mono',monospace}
+
+    /* FILTER */
+    .filter-bar{position:relative;z-index:10;border-bottom:1px solid var(--bd)}
+    .filter-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;gap:4px;overflow-x:auto}
+    .filter-inner::-webkit-scrollbar{display:none}
+    .filter-btn{padding:12px 16px;font-size:13px;font-weight:500;color:var(--fg-2);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-family:inherit;white-space:nowrap;transition:all 0.15s}
+    .filter-btn:hover{color:var(--fg)}
+    .filter-btn.active{color:var(--blue);border-bottom-color:var(--blue)}
+
+    /* MAIN */
+    .main{position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:32px 24px 80px}
+
+    /* FEATURED CARD */
+    .feat-card{background:var(--bg-2);border:1px solid var(--bd);border-radius:var(--r12);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;margin-bottom:16px;transition:border-color 0.2s}
+    .feat-card:hover{border-color:rgba(255,255,255,0.18)}
+    .feat-info{padding:36px}
+    .feat-preview{position:relative;overflow:hidden;background:var(--bg-3);min-height:320px}
+    .feat-preview iframe{width:175%;height:175%;transform:scale(0.572);transform-origin:top left;border:none;pointer-events:none;filter:brightness(0.88) saturate(0.9)}
+    .feat-preview-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(13,17,23,0.5));display:flex;align-items:flex-end;justify-content:flex-end;padding:16px}
+
+    .feat-num{font-size:11px;font-weight:600;font-family:'JetBrains Mono',monospace;color:var(--fg-4);letter-spacing:1px;margin-bottom:10px}
+
+    .cms-pill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;color:var(--green);border:1px solid var(--green-b);background:var(--green-s);margin-bottom:12px}
+
+    .feat-name{font-size:20px;font-weight:700;color:var(--fg);margin-bottom:4px;letter-spacing:-0.3px}
+    .feat-domain{font-size:12px;color:var(--fg-3);font-family:'JetBrains Mono',monospace;margin-bottom:14px}
+    .feat-desc{font-size:14px;color:var(--fg-2);line-height:1.65;margin-bottom:20px}
+
+    .highlights{display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
+    .hl-item{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--fg-2);font-family:'JetBrains Mono',monospace}
+    .hl-item::before{content:'▹';color:var(--blue);flex-shrink:0}
+
+    .tech-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+    .t-chip{font-size:11px;font-family:'JetBrains Mono',monospace;padding:2px 8px;border-radius:4px;background:var(--bg-3);border:1px solid var(--bd);color:var(--fg-2)}
+
+    .feat-footer{display:flex;align-items:center;gap:14px}
+
+    .visit-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:var(--r6);background:var(--blue);color:#fff;font-size:13px;font-weight:500;border:1px solid rgba(255,255,255,0.1);transition:background 0.15s}
+    .visit-btn:hover{background:#388bfd}
+
+    .visit-btn-ghost{background:var(--bg-3);color:var(--fg);border-color:var(--bd)}
+    .visit-btn-ghost:hover{background:var(--bg-4);border-color:rgba(255,255,255,0.15)}
+
+    .site-url{font-size:12px;color:var(--fg-4);font-family:'JetBrains Mono',monospace}
+
+    .preview-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:var(--r6);font-size:12px;font-weight:500;color:#fff;text-decoration:none;transition:opacity 0.15s}
+    .preview-badge:hover{opacity:0.85}
+
+    /* GRID ROW */
+    .proj-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
+
+    .pcard{background:var(--bg-2);border:1px solid var(--bd);border-radius:var(--r8);display:flex;flex-direction:column;overflow:hidden;transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s;position:relative}
+    .pcard::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--card-c,var(--blue)) 0%,transparent 60%);opacity:0;transition:opacity 0.25s}
+    .pcard:hover{border-color:rgba(255,255,255,0.16);box-shadow:0 4px 20px rgba(0,0,0,0.5);transform:translateY(-2px)}
+    .pcard:hover::after{opacity:1}
+
+    .pcard-preview{height:180px;position:relative;overflow:hidden;background:var(--bg-3);flex-shrink:0}
+    .pcard-preview iframe{width:200%;height:200%;transform:scale(0.5);transform-origin:top left;border:none;pointer-events:none;filter:brightness(0.85) saturate(0.9)}
+    .pcard-preview-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,var(--bg-2))}
+    .pcard-badge{position:absolute;top:10px;right:10px;z-index:2;font-size:10px;font-weight:600;padding:3px 8px;border-radius:4px;border:1px solid;font-family:'JetBrains Mono',monospace}
+
+    .pcard-body{padding:16px 18px;flex:1;display:flex;flex-direction:column}
+    .pcard-num{font-size:10px;font-weight:600;font-family:'JetBrains Mono',monospace;color:var(--fg-4);letter-spacing:1px;margin-bottom:7px}
+    .pcard-name{font-size:14px;font-weight:600;color:var(--fg);margin-bottom:5px}
+    .pcard-domain{font-size:11px;color:var(--fg-3);font-family:'JetBrains Mono',monospace;margin-bottom:10px}
+    .pcard-desc{font-size:13px;color:var(--fg-2);line-height:1.6;flex:1;margin-bottom:14px}
+    .pcard-highlights{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+    .pcard-hl{display:flex;align-items:flex-start;gap:6px;font-size:11px;color:var(--fg-3);font-family:'JetBrains Mono',monospace}
+    .pcard-hl::before{content:'▹';color:var(--blue);flex-shrink:0}
+    .pcard-footer{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--bd-s);margin-top:auto}
+    .pcard-url{font-size:11px;color:var(--fg-4);font-family:'JetBrains Mono',monospace}
+    .pcard-link{font-size:12px;color:var(--blue);font-weight:500;display:inline-flex;align-items:center;gap:3px;opacity:0.8;transition:opacity 0.15s}
+    .pcard-link:hover{opacity:1}
+
+    /* CTA / private cards */
+    .cta-card{background:linear-gradient(135deg,var(--bg-2),var(--bg-3));border:1px solid var(--bd);border-radius:var(--r8);padding:32px 24px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:360px}
+    .cta-icon{font-size:36px;margin-bottom:16px}
+    .cta-title{font-size:16px;font-weight:600;color:var(--fg);margin-bottom:8px;letter-spacing:-0.2px}
+    .cta-desc{font-size:13px;color:var(--fg-2);line-height:1.65;margin-bottom:24px;max-width:220px}
+    .priv-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:4px;font-size:10px;font-weight:600;font-family:'JetBrains Mono',monospace;letter-spacing:0.3px;background:var(--bg-3);border:1px solid var(--bd);color:var(--fg-3);margin-bottom:14px}
+
+    /* REVEAL */
+    .rv{opacity:0;transform:translateY(14px);transition:opacity 0.5s ease,transform 0.5s ease}
+    .rv.in{opacity:1;transform:translateY(0)}
+
+    /* FOOTER */
+    footer{position:relative;z-index:10;border-top:1px solid var(--bd);background:var(--bg-2)}
+    .footer-inner{max-width:1280px;margin:0 auto;padding:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+    .footer-brand{display:flex;align-items:center;gap:8px}
+    .footer-avatar{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#7c3aed);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:#fff}
+    .footer-name{font-size:13px;font-weight:600;color:var(--fg)}
+    .footer-copy{font-size:12px;color:var(--fg-4);font-family:'JetBrains Mono',monospace}
+    .footer-links{display:flex;gap:16px}
+    .footer-links a{font-size:12px;color:var(--fg-3);transition:color 0.15s}
+    .footer-links a:hover{color:var(--fg)}
+
+    @keyframes aPulse{0%,100%{opacity:1}50%{opacity:0.35}}
+    .status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 6px rgba(63,185,80,0.8);animation:aPulse 2s infinite;display:inline-block}
+
+    @media(max-width:1024px){
+      nav{padding:0 16px}
+      .nav-links-row{display:none}
+      .feat-card{grid-template-columns:1fr}
+      .feat-preview{min-height:240px}
+      .proj-row{grid-template-columns:1fr 1fr}
+      .ph-inner{padding:80px 16px 28px}
+      .main{padding:24px 16px 60px}
+      .filter-inner{padding:0 16px}
+    }
+
+    @media(max-width:640px){
+      .proj-row{grid-template-columns:1fr}
+      .footer-inner{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+  <div class="glow-top"></div>
+
+  <!-- NAV -->
+  <div class="nav-wrap">
+    <nav>
+      <div class="nav-brand">
+        <div class="nav-avatar">DS</div>
+        <span class="nav-name">Deepak Sharma</span>
+        <div class="nav-sep"></div>
+      </div>
+      <div class="nav-links-row">
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#process" class="nav-link">Process</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-right">
+        <a href="index.html" class="nav-btn nb-ghost">← Back to home</a>
+        <a href="index.html#contact" class="nav-btn nb-primary">Get in touch</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="ph-inner">
+      <a href="index.html" class="back-btn">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M9.78 4.22a.75.75 0 010 1.06L7.06 8l2.72 2.72a.75.75 0 11-1.06 1.06L5.47 8.53a.75.75 0 010-1.06l3.25-3.25a.75.75 0 011.06 0z"/></svg>
+        deepaksharma · portfolio
+      </a>
+      <div class="ph-kicker"><div class="ph-kicker-dot"></div>Live Deployed Systems</div>
+      <h1 class="ph-h1">Project Manifest</h1>
+      <p class="ph-desc">Public-facing systems built and shipped in production — across mobility, logistics, hospitality, e-commerce, and AI. Each with a real client, real users, and real load.</p>
+      <div class="ph-meta">
+        <div class="ph-meta-item"><div class="status-dot"></div>All systems live</div>
+        <div class="ph-meta-item">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 010-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5zm10.5-1h-8a1 1 0 00-1 1v6.708A2.486 2.486 0 014.5 9h8V1.5z"/></svg>
+          6 public projects
+        </div>
+        <div class="ph-meta-item">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M11.5 1.5A1.5 1.5 0 0113 3v10a1.5 1.5 0 01-1.5 1.5h-7A1.5 1.5 0 013 13V3a1.5 1.5 0 011.5-1.5h7zm-7 1a.5.5 0 00-.5.5v10a.5.5 0 00.5.5h7a.5.5 0 00.5-.5V3a.5.5 0 00-.5-.5h-7z"/></svg>
+          + private systems on request
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <button class="filter-btn active" data-f="all">All</button>
+      <button class="filter-btn" data-f="mobility">Mobility</button>
+      <button class="filter-btn" data-f="logistics">Logistics</button>
+      <button class="filter-btn" data-f="ecommerce">E-Commerce</button>
+      <button class="filter-btn" data-f="hospitality">Hospitality</button>
+      <button class="filter-btn" data-f="ai">AI / Agents</button>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- 01 SEWAK TRAVELS — Featured -->
+    <div class="feat-card rv" data-cat="mobility">
+      <div class="feat-info">
+        <div class="feat-num">01 / 06</div>
+        <div class="cms-pill">⬡ Includes CMS Platform</div>
+        <div class="feat-name">Sewak Travels</div>
+        <div class="feat-domain">Mobility · Cab Booking · Travel Agency</div>
+        <div class="feat-desc">Full-featured cab booking and travel management platform for one of Gurgaon's leading travel agencies. Covers cab booking, flight &amp; hotel aggregation, and tour packages — with a custom ops CMS for fleet dispatch, booking management, and pricing controls.</div>
+        <div class="highlights">
+          <div class="hl-item">Real-time cab dispatch with live driver tracking</div>
+          <div class="hl-item">Multi-service booking — cabs, flights, hotels</div>
+          <div class="hl-item">Operations CMS: booking mgmt, driver, pricing</div>
+          <div class="hl-item">Mobile-first, SEO-optimised landing pages</div>
+        </div>
+        <div class="tech-row">
+          <span class="t-chip">React</span>
+          <span class="t-chip">Node.js</span>
+          <span class="t-chip">Express</span>
+          <span class="t-chip">MongoDB</span>
+          <span class="t-chip">WebSocket</span>
+          <span class="t-chip">Docker</span>
+        </div>
+        <div class="feat-footer">
+          <a href="https://sewaktravels.com" target="_blank" rel="noopener noreferrer" class="visit-btn">Visit Live ↗</a>
+          <span class="site-url">sewaktravels.com</span>
+        </div>
+      </div>
+      <div class="feat-preview">
+        <iframe src="https://sewaktravels.com" title="Sewak Travels live preview" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="feat-preview-overlay">
+          <a href="https://sewaktravels.com" target="_blank" rel="noopener noreferrer" class="preview-badge" style="background:var(--blue)">Open ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW: BDA + NECC + Countryard -->
+    <div class="proj-row">
+
+      <!-- 02 BDA CARRIERS -->
+      <div class="pcard rv" style="--card-c:var(--orange)" data-cat="logistics">
+        <div class="pcard-preview">
+          <iframe src="https://bdacarriers.com" title="BDA Carriers preview" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+          <div class="pcard-preview-overlay"></div>
+          <div class="pcard-badge" style="color:var(--orange);border-color:rgba(240,136,62,0.4);background:var(--orange-s)">Logistics</div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-num">02 / 06</div>
+          <div class="pcard-name">BDA Carriers</div>
+          <div class="pcard-domain">Car Transport · Relocation · PAN India</div>
+          <div class="pcard-desc">India's trusted car transport and packers & movers platform with route-based pricing, multi-city service coverage, and an integrated lead CRM.</div>
+          <div class="pcard-highlights">
+            <div class="pcard-hl">Instant quote calculator, route-based pricing</div>
+            <div class="pcard-hl">Multi-city service coverage management</div>
+            <div class="pcard-hl">Lead capture &amp; CRM pipeline</div>
+          </div>
+          <div class="tech-row">
+            <span class="t-chip">React</span><span class="t-chip">Node.js</span><span class="t-chip">PostgreSQL</span><span class="t-chip">Docker</span>
+          </div>
+          <div class="pcard-footer">
+            <span class="pcard-url">bdacarriers.com</span>
+            <a href="https://bdacarriers.com" target="_blank" rel="noopener noreferrer" class="pcard-link">Visit ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 NECC GROUP -->
+      <div class="pcard rv" style="--card-c:var(--green)" data-cat="logistics">
+        <div class="pcard-preview">
+          <iframe src="https://neccgroup.com" title="NECC Group preview" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+          <div class="pcard-preview-overlay"></div>
+          <div class="pcard-badge" style="color:var(--green);border-color:var(--green-b);background:var(--green-s)">Logistics · Mobility</div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-num">03 / 06</div>
+          <div class="pcard-name">NECC Group</div>
+          <div class="pcard-domain">Logistics · Corporate Mobility · Fleet</div>
+          <div class="pcard-desc">Corporate logistics and mobility group — dynamic service pages, enterprise enquiry flows, fleet & logistics operations management, and a CMS-controlled content structure.</div>
+          <div class="pcard-highlights">
+            <div class="pcard-hl">Logistics &amp; fleet operations management</div>
+            <div class="pcard-hl">Enterprise enquiry &amp; lead pipeline</div>
+            <div class="pcard-hl">Dynamic service pages via CMS</div>
+          </div>
+          <div class="tech-row">
+            <span class="t-chip">React</span><span class="t-chip">Next.js</span><span class="t-chip">Node.js</span><span class="t-chip">MongoDB</span>
+          </div>
+          <div class="pcard-footer">
+            <span class="pcard-url">neccgroup.com</span>
+            <a href="https://neccgroup.com" target="_blank" rel="noopener noreferrer" class="pcard-link">Visit ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 COUNTRYARD -->
+      <div class="pcard rv" style="--card-c:var(--yellow)" data-cat="hospitality">
+        <div class="pcard-preview">
+          <iframe src="https://www.countryard.com" title="Countryard preview" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+          <div class="pcard-preview-overlay"></div>
+          <div class="pcard-badge" style="color:var(--yellow);border-color:rgba(210,153,34,0.4);background:rgba(210,153,34,0.1)">Hospitality</div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-num">04 / 06</div>
+          <div class="pcard-name">Countryard — Jim Corbett</div>
+          <div class="pcard-domain">Hospitality · Luxury Resort · Booking</div>
+          <div class="pcard-desc">Luxury resort website with room suite browsing, direct booking, event management (weddings, corporate), and a full property CMS.</div>
+          <div class="pcard-highlights">
+            <div class="pcard-hl">Direct room booking + tariff management</div>
+            <div class="pcard-hl">Wedding, birthday &amp; corporate events</div>
+            <div class="pcard-hl">Property CMS — rooms, gallery, events</div>
+          </div>
+          <div class="tech-row">
+            <span class="t-chip">React</span><span class="t-chip">Node.js</span><span class="t-chip">MongoDB</span><span class="t-chip">Express</span>
+          </div>
+          <div class="pcard-footer">
+            <span class="pcard-url">countryard.com</span>
+            <a href="https://www.countryard.com" target="_blank" rel="noopener noreferrer" class="pcard-link">Visit ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 05 VITA VISTA — Featured -->
+    <div class="feat-card rv" data-cat="ecommerce" style="margin-bottom:12px">
+      <div class="feat-info">
+        <div class="feat-num">05 / 06</div>
+        <div class="cms-pill" style="color:var(--purple);border-color:var(--purple-b);background:var(--purple-s)">⬡ Full E-Commerce CMS Included</div>
+        <div class="feat-name">Vita Vista</div>
+        <div class="feat-domain">E-Commerce · Multi-Category Retail · Russia</div>
+        <div class="feat-desc">International multi-category e-commerce platform (fashion, décor, gadgets, footwear) serving the Russian market. Complete storefront with a full custom CMS for inventory, orders, discounts, and site content management.</div>
+        <div class="highlights">
+          <div class="hl-item">Multi-category catalogue with filters &amp; smart search</div>
+          <div class="hl-item">Dynamic discount engine — up to 50% seasonal offers</div>
+          <div class="hl-item">Full CMS: inventory, orders, pricing, media, pages</div>
+          <div class="hl-item">Multiple payment method integrations</div>
+          <div class="hl-item">Member loyalty system &amp; free shipping threshold rules</div>
+        </div>
+        <div class="tech-row">
+          <span class="t-chip">React</span>
+          <span class="t-chip">Node.js</span>
+          <span class="t-chip">MongoDB</span>
+          <span class="t-chip">Express</span>
+          <span class="t-chip">Docker</span>
+          <span class="t-chip">Linux</span>
+          <span class="t-chip">CI/CD</span>
+        </div>
+        <div class="feat-footer">
+          <a href="https://vitavista.ru" target="_blank" rel="noopener noreferrer" class="visit-btn" style="background:var(--purple)">Visit Live ↗</a>
+          <span class="site-url">vitavista.ru</span>
+        </div>
+      </div>
+      <div class="feat-preview">
+        <iframe src="https://vitavista.ru" title="Vita Vista live preview" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="feat-preview-overlay">
+          <a href="https://vitavista.ru" target="_blank" rel="noopener noreferrer" class="preview-badge" style="background:var(--purple)">Open ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW: Vita Vista CMS + AI card + Private -->
+    <div class="proj-row">
+
+      <!-- 06 VITA VISTA CMS -->
+      <div class="pcard rv" style="--card-c:var(--purple)" data-cat="ecommerce">
+        <div class="pcard-body" style="padding:24px 20px">
+          <div class="pcard-num">06 / 06</div>
+          <div class="cms-pill" style="color:var(--purple);border-color:var(--purple-b);background:var(--purple-s)">⬡ CMS Platform</div>
+          <div class="pcard-name">Vita Vista — Admin CMS</div>
+          <div class="pcard-domain">E-Commerce CMS · Inventory · Orders</div>
+          <div class="pcard-desc">Custom-built admin suite powering the Vita Vista platform — products, categories, orders, discounts, shipping rules, media, and analytics from a single dashboard.</div>
+          <div class="pcard-highlights">
+            <div class="pcard-hl">Product &amp; inventory mgmt with bulk upload</div>
+            <div class="pcard-hl">Order lifecycle: placed → shipped → delivered</div>
+            <div class="pcard-hl">Discount &amp; coupon engine with scheduling</div>
+            <div class="pcard-hl">Customer accounts, member tiers &amp; analytics</div>
+          </div>
+          <div class="tech-row">
+            <span class="t-chip">React</span><span class="t-chip">TypeScript</span><span class="t-chip">Node.js</span><span class="t-chip">MongoDB</span><span class="t-chip">Docker</span>
+          </div>
+          <div class="pcard-footer">
+            <span class="pcard-url">Internal Tool</span>
+            <span style="font-size:11px;color:var(--purple);border:1px solid var(--purple-b);padding:3px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace">Powers vitavista.ru</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI AGENTS card -->
+      <div class="pcard rv" style="--card-c:var(--purple)" data-cat="ai">
+        <div class="pcard-body" style="padding:24px 20px">
+          <div class="pcard-num" style="color:var(--purple)">AI / Agents</div>
+          <div class="pcard-name">Autonomous Agent Framework</div>
+          <div class="pcard-domain">AI Architecture · LLM Integration</div>
+          <div class="pcard-desc">Multi-agent orchestration system with task decomposition, tool calling, memory management, and self-correcting pipelines connecting LLMs to real-world APIs.</div>
+          <div class="pcard-highlights">
+            <div class="pcard-hl">Multi-model orchestration (GPT-4o, Claude)</div>
+            <div class="pcard-hl">Persistent memory + RAG knowledge base</div>
+            <div class="pcard-hl">Tool-use pipelines for business automation</div>
+            <div class="pcard-hl">Self-correcting retry &amp; fallback logic</div>
+          </div>
+          <div class="tech-row">
+            <span class="t-chip">LangChain</span><span class="t-chip">FastAPI</span><span class="t-chip">Pinecone</span><span class="t-chip">Docker</span>
+          </div>
+          <div class="pcard-footer">
+            <span class="priv-badge">🔒 Private / NDA</span>
+            <a href="index.html#contact" class="pcard-link">Request details →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRIVATE SYSTEMS -->
+      <div class="pcard rv" data-cat="all" style="background:linear-gradient(135deg,var(--bg-2),var(--bg-3))">
+        <div class="pcard-body" style="padding:24px 20px;justify-content:space-between;height:100%">
+          <div>
+            <div class="priv-badge" style="margin-bottom:14px">🔒 Additional Private Systems</div>
+            <div class="pcard-name">NDA-Protected Platforms</div>
+            <div class="pcard-desc" style="margin-bottom:12px">Proprietary systems across every major category — available as case studies on request. NDA covers all verticals.</div>
+            <div class="pcard-highlights">
+              <div class="pcard-hl">Logistics Tracking &amp; Operations CMS</div>
+              <div class="pcard-hl">IoT Device Management Platform</div>
+              <div class="pcard-hl">Advertisement Industry CMS</div>
+              <div class="pcard-hl">Location Intelligence &amp; Geo Analytics</div>
+              <div class="pcard-hl">Cab / Mobility Backend Systems</div>
+              <div class="pcard-hl">E-Commerce Platforms &amp; CMS</div>
+              <div class="pcard-hl">Hospitality &amp; Booking Systems</div>
+              <div class="pcard-hl">React Native Android Applications</div>
+              <div class="pcard-hl">AI Agent Orchestration Pipelines</div>
+            </div>
+          </div>
+          <div class="pcard-footer" style="margin-top:16px">
+            <span style="font-size:11px;color:var(--fg-4);font-family:'JetBrains Mono',monospace">All categories covered</span>
+            <a href="index.html#contact" class="pcard-link">Request case study →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-avatar">DS</div>
+        <span class="footer-name">Deepak Sharma</span>
+      </div>
+      <p class="footer-copy">© 2026 Deepak Sharma · All rights reserved</p>
+      <nav>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="mailto:deepaksharmaa.39@gmail.com">Email</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    /* STARFIELD */
+    const cv=document.getElementById('starfield'),cx=cv.getContext('2d');
+    let W,H,stars=[];
+    const resize=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight};
+    const mkStars=()=>{stars=Array.from({length:260},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.1+0.1,a:Math.random(),s:Math.random()*0.0016+0.0004,d:Math.random()>0.5?1:-1}))};
+    const draw=()=>{cx.clearRect(0,0,W,H);stars.forEach(s=>{s.a+=s.s*s.d;if(s.a>=1||s.a<=0.04)s.d*=-1;cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);cx.fillStyle=`rgba(210,225,255,${s.a*0.6})`;cx.fill()});requestAnimationFrame(draw)};
+    resize();mkStars();draw();
+    window.addEventListener('resize',()=>{resize();mkStars()});
+
+    /* REVEAL */
+    const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target)}})},{threshold:0.06});
+    document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+    /* FILTER */
+    const filterBtns=document.querySelectorAll('.filter-btn');
+    const allCards=document.querySelectorAll('[data-cat]');
+    filterBtns.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        filterBtns.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const f=btn.dataset.f;
+        allCards.forEach(card=>{
+          const show=f==='all'||card.dataset.cat===f||card.dataset.cat==='all';
+          card.style.opacity=show?'1':'0.2';
+          card.style.pointerEvents=show?'':'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
