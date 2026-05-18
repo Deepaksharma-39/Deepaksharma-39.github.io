@@ -3,16 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deepak Sharma — Full-Stack Engineer & AI Architect</title>
-  <meta name="description" content="Full-Stack Engineer & AI Architect specializing in CMS platforms, IoT systems, logistics tracking, location intelligence, AI integrations, and intelligent agent development." />
-  <meta name="keywords" content="Deepak Sharma, Full Stack Developer, AI Engineer, React, Node.js, CMS Development, IoT, Logistics, AI Agents" />
+  <title>Build Apps, Optimize CMS & Integrate AI | Deepak Sharma</title>
+  <meta name="description" content="Create your own app, optimize existing CMS, manage and scale applications, and integrate AI automation with Deepak Sharma." />
+  <meta name="keywords" content="Deepak Sharma, create your own app, app development, CMS optimization, existing CMS optimization, app management, AI integration, AI automation, Full Stack Developer, React Developer, Node.js Developer" />
   <meta name="author" content="Deepak Sharma" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0d1117" />
+  <link rel="canonical" href="https://deepaksharma-39.github.io/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Deepak Sharma — Full-Stack Engineer & AI Architect" />
-  <meta property="og:description" content="Engineering intelligent systems — from CMS platforms to AI agents, logistics to location intelligence." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Deepak Sharma Portfolio" />
+  <meta property="og:url" content="https://deepaksharma-39.github.io/" />
+  <meta property="og:title" content="Build Apps, Optimize CMS & Integrate AI | Deepak Sharma" />
+  <meta property="og:description" content="Create custom apps, improve existing CMS platforms, manage applications, and integrate AI workflows into production systems." />
+  <meta property="og:image" content="https://deepaksharma-39.github.io/social-preview.svg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Deepak Sharma","jobTitle":"Full-Stack Engineer & AI Architect","email":"deepaksharmaa.39@gmail.com","knowsAbout":["React","Node.js","AI Development","CMS Platforms","IoT Systems","Logistics Tracking","Location Analysis","Agent Architecture"]}</script>
+  <meta name="twitter:title" content="Build Apps, Optimize CMS & Integrate AI | Deepak Sharma" />
+  <meta name="twitter:description" content="Create apps, optimize CMS platforms, manage applications, and integrate AI automation with Deepak Sharma." />
+  <meta name="twitter:image" content="https://deepaksharma-39.github.io/social-preview.svg" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Deepak Sharma",
+      "url": "https://deepaksharma-39.github.io/",
+      "jobTitle": "App Developer, CMS Optimization & AI Integration Engineer",
+      "email": "mailto:deepaksharmaa.39@gmail.com",
+      "sameAs": [
+        "https://github.com/Deepaksharma-39",
+        "https://linkedin.com/in/d33paks-sharma"
+      ],
+      "knowsAbout": [
+        "React",
+        "Node.js",
+        "AI Agent Development",
+        "CMS Platforms",
+        "IoT Dashboards",
+        "Logistics Tracking",
+        "Location Intelligence",
+        "E-Commerce Development",
+        "Custom App Development",
+        "Existing CMS Optimization",
+        "Application Management",
+        "AI Integration Services"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom app development",
+            "description": "Create production-ready web and mobile applications from idea to launch."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "CMS optimization and management",
+            "description": "Optimize, modernize, and manage existing CMS platforms and admin systems."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI integration",
+            "description": "Integrate AI agents, automation, LLM workflows, and intelligent product features."
+          }
+        }
+      ]
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
@@ -679,6 +743,27 @@
       margin-top: 8px; font-family: 'JetBrains Mono', monospace;
     }
 
+    .cform-status {
+      min-height: 18px;
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: center;
+      color: var(--fg-3);
+    }
+
+    .cform-status.ok { color: var(--green); }
+    .cform-status.err { color: var(--red); }
+
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
     /* ── FOOTER ── */
     footer {
       position: relative; z-index: 10;
@@ -763,7 +848,7 @@
 <body>
   <canvas id="starfield"></canvas>
   <div class="glow-top"></div>
-  <div class="toast" id="toast">✓ Opening your mail client…</div>
+  <div class="toast" id="toast" role="status" aria-live="polite">✓ Message sent successfully.</div>
 
   <!-- NAV -->
   <div class="nav-wrap">
@@ -801,11 +886,11 @@
             Available for new projects
           </div>
           <h1 class="hero-h1">
-            Full-Stack Engineer<br>
-            <span class="grad">&amp; AI Architect</span>
+            Create Your Own App<br>
+            <span class="grad">Optimize CMS &amp; Integrate AI</span>
           </h1>
           <p class="hero-sub">
-            I build production-grade platforms across mobility, logistics, IoT, and AI. From real-time tracking systems to autonomous agent pipelines — shipped end-to-end, at scale.
+            I help you create your own app, optimize or rebuild an existing CMS, manage and scale your application, and integrate AI automations that improve real business workflows.
           </p>
           <div class="hero-btns">
             <a href="projects.html" class="btn btn-blue">
@@ -1172,8 +1257,8 @@
             <div class="sec-kicker-dot" style="background:var(--orange)"></div>
             Get in touch
           </div>
-          <h2 class="sec-h2">Let's build something</h2>
-          <p class="sec-desc">Have a project in mind? I respond to every message personally.</p>
+          <h2 class="sec-h2">Build, optimize, manage or automate</h2>
+          <p class="sec-desc">Need a new app, CMS optimization, application management, or AI integration? I respond to every message personally.</p>
         </div>
 
         <div class="contact-layout rv">
@@ -1210,21 +1295,24 @@
             </div>
           </div>
 
-          <div class="cform" aria-label="Contact form">
+          <form class="cform" id="contactForm" action="https://formsubmit.co/deepaksharmaa.39@gmail.com" method="POST" aria-label="Contact form">
             <div class="cform-title">Send a message</div>
+            <input type="hidden" name="_subject" value="New portfolio enquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" />
             <div class="form-row2">
               <div class="fg">
                 <label for="cn">Your name</label>
-                <input type="text" id="cn" placeholder="Jane Smith" autocomplete="name" />
+                <input type="text" id="cn" name="name" placeholder="Jane Smith" autocomplete="name" required />
               </div>
               <div class="fg">
                 <label for="ce">Email address</label>
-                <input type="email" id="ce" placeholder="jane@company.com" autocomplete="email" />
+                <input type="email" id="ce" name="email" placeholder="jane@company.com" autocomplete="email" required />
               </div>
             </div>
             <div class="fg">
               <label for="ct">Project type</label>
-              <select id="ct">
+              <select id="ct" name="project_type">
                 <option value="">Select a category…</option>
                 <option>AI Integration / Agent Development</option>
                 <option>CMS Platform Development</option>
@@ -1240,14 +1328,15 @@
             </div>
             <div class="fg">
               <label for="cm">Message</label>
-              <textarea id="cm" placeholder="Tell me about your project, timeline, and goals…"></textarea>
+              <textarea id="cm" name="message" placeholder="Tell me about your project, timeline, and goals…" required></textarea>
             </div>
-            <button class="cform-submit" onclick="sendMail()">
+            <button class="cform-submit" id="contactSubmit" type="submit">
               <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M.989 8 .064 2.68a1.342 1.342 0 011.85-1.462l13.402 5.744a1.13 1.13 0 010 2.076L1.914 14.782a1.343 1.343 0 01-1.85-1.463L.99 8zm.603-5.288L2.38 7.25h4.87a.75.75 0 010 1.5H2.38l-.788 4.538L13.929 8z"/></svg>
-              Send Message
+              <span>Send Message</span>
             </button>
-            <div class="cform-note">Sends to deepaksharmaa.39@gmail.com · No spam, ever.</div>
-          </div>
+            <div class="cform-status" id="contactStatus" aria-live="polite"></div>
+            <div class="cform-note">Delivers to deepaksharmaa.39@gmail.com · If delivery is blocked, your mail app opens as a fallback.</div>
+          </form>
         </div>
       </div>
     </section>
@@ -1338,20 +1427,72 @@
       });
     });
 
-    /* SEND MAIL via mailto */
-    function sendMail() {
-      const name = document.getElementById('cn').value.trim();
-      const email = document.getElementById('ce').value.trim();
-      const type = document.getElementById('ct').value;
-      const msg = document.getElementById('cm').value.trim();
-      if(!name || !email || !msg) { alert('Please fill in your name, email, and message.'); return; }
-      const sub = encodeURIComponent(`Portfolio Enquiry${type ? ' — '+type : ''}`);
-      const body = encodeURIComponent(`Hi Deepak,\n\nMy name is ${name}.\n\nProject type: ${type||'Not specified'}\n\n${msg}\n\nBest regards,\n${name}\n${email}`);
-      window.location.href = `mailto:deepaksharmaa.39@gmail.com?subject=${sub}&body=${body}`;
+    /* CONTACT FORM */
+    const contactForm = document.getElementById('contactForm');
+    const contactSubmit = document.getElementById('contactSubmit');
+    const contactStatus = document.getElementById('contactStatus');
+
+    function showToast(message) {
       const t = document.getElementById('toast');
+      t.textContent = message;
       t.classList.add('show');
       setTimeout(() => t.classList.remove('show'), 3500);
     }
+
+    function openMailFallback(formData) {
+      const name = formData.get('name').trim();
+      const email = formData.get('email').trim();
+      const type = formData.get('project_type');
+      const msg = formData.get('message').trim();
+      const sub = encodeURIComponent(`Portfolio Enquiry${type ? ' — '+type : ''}`);
+      const body = encodeURIComponent(`Hi Deepak,
+
+My name is ${name}.
+
+Project type: ${type || 'Not specified'}
+
+${msg}
+
+Best regards,
+${name}
+${email}`);
+      window.location.href = `mailto:deepaksharmaa.39@gmail.com?subject=${sub}&body=${body}`;
+    }
+
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      if (!contactForm.reportValidity()) return;
+
+      const formData = new FormData(contactForm);
+      contactStatus.textContent = 'Sending your message…';
+      contactStatus.className = 'cform-status';
+      contactSubmit.disabled = true;
+      contactSubmit.querySelector('span').textContent = 'Sending…';
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/deepaksharmaa.39@gmail.com', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        if (!response.ok) throw new Error('Form delivery failed');
+
+        contactForm.reset();
+        contactStatus.textContent = 'Thanks — your message has been sent.';
+        contactStatus.className = 'cform-status ok';
+        showToast('✓ Message sent successfully.');
+      } catch (error) {
+        contactStatus.textContent = 'Could not send directly, opening your email app instead.';
+        contactStatus.className = 'cform-status err';
+        showToast('Opening your mail app…');
+        openMailFallback(formData);
+      } finally {
+        contactSubmit.disabled = false;
+        contactSubmit.querySelector('span').textContent = 'Send Message';
+      }
+    });
   </script>
 </body>
 </html>

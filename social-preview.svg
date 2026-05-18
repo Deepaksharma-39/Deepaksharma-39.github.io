@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Deepak Sharma portfolio preview">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0" stop-color="#2f81f7" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="card" x1="120" y1="80" x2="1080" y2="550" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#161b22" />
+      <stop offset="1" stop-color="#1c2128" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f81f7" />
+      <stop offset="1" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0d1117" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+  <rect x="92" y="78" width="1016" height="474" rx="36" fill="url(#card)" stroke="#30363d" stroke-width="2" />
+  <circle cx="190" cy="180" r="54" fill="url(#accent)" />
+  <text x="190" y="195" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#fff">DS</text>
+  <text x="270" y="170" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#e6edf3">Deepak Sharma</text>
+  <text x="270" y="210" font-family="Inter, Arial, sans-serif" font-size="20" fill="#8b949e">App Development · CMS Optimization · AI Integration</text>
+  <text x="150" y="330" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" fill="#e6edf3">Create apps, optimize CMS,</text>
+  <text x="150" y="398" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" fill="#e6edf3">manage apps &amp; integrate AI</text>
+  <text x="150" y="468" font-family="Inter, Arial, sans-serif" font-size="24" fill="#8b949e">Custom Apps · Existing CMS · App Management · AI Automation</text>
+  <rect x="150" y="500" width="312" height="6" rx="3" fill="url(#accent)" />
+</svg>
