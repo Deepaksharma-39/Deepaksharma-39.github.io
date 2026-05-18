@@ -1363,7 +1363,65 @@
   </div><!-- .page -->
 
   <script>
-    /* STARFIELD */
+    /* STARFIELD PRESETS */
+    const STARFIELD_PRESET = 'matrix'; // matrix | subtle | neo
+
+    const PRESETS = {
+      matrix: {
+        density: 1.28,
+        starColor: [120, 255, 160],
+        driftColor: [70, 255, 125],
+        driftCount: 170,
+        driftSpeed: [0.14, 0.46],
+        driftAlpha: [0.04, 0.14],
+        nebula: [
+          { x: 0.18, y: 0.74, r: 0.22, c: 'rgba(34,197,94,0.1)' },
+          { x: 0.84, y: 0.2, r: 0.18, c: 'rgba(16,185,129,0.08)' }
+        ],
+        suns: [
+          { x: 0.16, y: 0.2, r: 28, hue: 125 },
+          { x: 0.81, y: 0.66, r: 20, hue: 145 }
+        ],
+        planets: ['rgba(74,222,128,0.62)','rgba(52,211,153,0.58)','rgba(134,239,172,0.54)','rgba(34,197,94,0.56)']
+      },
+      subtle: {
+        density: 0.82,
+        starColor: [203, 213, 225],
+        driftColor: [148, 163, 184],
+        driftCount: 55,
+        driftSpeed: [0.03, 0.12],
+        driftAlpha: [0.02, 0.06],
+        nebula: [
+          { x: 0.15, y: 0.77, r: 0.18, c: 'rgba(71,85,105,0.08)' },
+          { x: 0.86, y: 0.23, r: 0.12, c: 'rgba(59,130,246,0.05)' }
+        ],
+        suns: [
+          { x: 0.18, y: 0.22, r: 24, hue: 210 },
+          { x: 0.82, y: 0.66, r: 18, hue: 230 }
+        ],
+        planets: ['rgba(148,163,184,0.5)','rgba(125,211,252,0.45)','rgba(180,196,215,0.42)','rgba(148,163,184,0.46)']
+      },
+      neo: {
+        density: 1.18,
+        starColor: [236, 72, 153],
+        driftColor: [99, 102, 241],
+        driftCount: 140,
+        driftSpeed: [0.1, 0.34],
+        driftAlpha: [0.03, 0.13],
+        nebula: [
+          { x: 0.13, y: 0.81, r: 0.23, c: 'rgba(236,72,153,0.12)' },
+          { x: 0.87, y: 0.22, r: 0.19, c: 'rgba(99,102,241,0.12)' }
+        ],
+        suns: [
+          { x: 0.2, y: 0.22, r: 29, hue: 320 },
+          { x: 0.82, y: 0.67, r: 21, hue: 250 }
+        ],
+        planets: ['rgba(244,114,182,0.64)','rgba(129,140,248,0.58)','rgba(45,212,191,0.54)','rgba(250,204,21,0.56)']
+      }
+    };
+
+    const preset = PRESETS[STARFIELD_PRESET] || PRESETS.matrix;
+
     const cv = document.getElementById('starfield');
     const cx = cv.getContext('2d');
     let W, H, stars = [], driftStars = [], planets = [], suns = [], nebulae = [];
@@ -1373,9 +1431,9 @@
     const resize = () => { W = cv.width = innerWidth; H = cv.height = innerHeight; };
 
     const mkScene = () => {
-      const density = Math.max(1, Math.min(1.75, (W * H) / 900000));
+      const density = Math.max(0.6, Math.min(1.9, ((W * H) / 900000) * preset.density));
 
-      stars = Array.from({ length: Math.floor(300 * density) }, () => ({
+      stars = Array.from({ length: Math.floor(280 * density) }, () => ({
         x: Math.random() * W,
         y: Math.random() * H,
         r: rand(0.35, 1.45),
@@ -1386,19 +1444,19 @@
         d: Math.random() > 0.5 ? 1 : -1
       }));
 
-      driftStars = Array.from({ length: Math.floor(95 * density) }, () => ({
+      driftStars = Array.from({ length: Math.floor(preset.driftCount * density) }, () => ({
         x: Math.random() * W,
         y: Math.random() * H,
-        len: rand(8, 26),
-        speed: rand(0.05, 0.22),
-        alpha: rand(0.03, 0.1)
+        len: rand(8, STARFIELD_PRESET === 'matrix' ? 34 : 26),
+        speed: rand(preset.driftSpeed[0], preset.driftSpeed[1]),
+        alpha: rand(preset.driftAlpha[0], preset.driftAlpha[1])
       }));
 
-      suns = Array.from({ length: 2 }, (_, i) => ({
-        x: i === 0 ? W * 0.18 : W * 0.82,
-        y: i === 0 ? H * 0.22 : H * 0.68,
-        r: i === 0 ? 30 : 22,
-        hue: i === 0 ? 38 : 210,
+      suns = preset.suns.map(s => ({
+        x: s.x * W,
+        y: s.y * H,
+        r: s.r,
+        hue: s.hue,
         pulse: rand(0, Math.PI * 2)
       }));
 
@@ -1409,13 +1467,15 @@
         size: [5, 7, 4, 6][i],
         speed: [0.0012, -0.0008, 0.0016, -0.001][i],
         angle: rand(0, Math.PI * 2),
-        color: ['rgba(147,197,253,0.65)','rgba(196,181,253,0.62)','rgba(248,113,113,0.55)','rgba(110,231,183,0.58)'][i]
+        color: preset.planets[i]
       }));
 
-      nebulae = [
-        { x: W * 0.12, y: H * 0.8, r: Math.max(220, W * 0.2), c: 'rgba(88, 101, 242, 0.11)' },
-        { x: W * 0.88, y: H * 0.24, r: Math.max(180, W * 0.14), c: 'rgba(168, 85, 247, 0.08)' }
-      ];
+      nebulae = preset.nebula.map(n => ({
+        x: W * n.x,
+        y: H * n.y,
+        r: Math.max(140, W * n.r),
+        c: n.c
+      }));
     };
 
     const draw = () => {
@@ -1438,8 +1498,8 @@
           s.x = W + rand(5, 60);
           s.y = rand(-40, H * 0.5);
         }
-        cx.strokeStyle = `rgba(191,219,254,${s.alpha})`;
-        cx.lineWidth = 1;
+        cx.strokeStyle = `rgba(${preset.driftColor[0]},${preset.driftColor[1]},${preset.driftColor[2]},${s.alpha})`;
+        cx.lineWidth = STARFIELD_PRESET === 'matrix' ? 1.15 : 1;
         cx.beginPath();
         cx.moveTo(s.x, s.y);
         cx.lineTo(s.x + s.len, s.y - s.len * 0.32);
@@ -1458,7 +1518,7 @@
 
         cx.beginPath();
         cx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        cx.fillStyle = `rgba(219,234,254,${s.a * 0.68})`;
+        cx.fillStyle = `rgba(${preset.starColor[0]},${preset.starColor[1]},${preset.starColor[2]},${s.a * 0.62})`;
         cx.fill();
       });
 
