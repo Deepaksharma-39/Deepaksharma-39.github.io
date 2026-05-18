@@ -1,0 +1,17 @@
+{
+  "name": "Deepak Sharma Portfolio",
+  "short_name": "Deepak Sharma",
+  "description": "Create apps, optimize CMS platforms, manage applications, and integrate AI automation with Deepak Sharma.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#2f81f7",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
