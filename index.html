@@ -1300,6 +1300,7 @@
             <div class="cform-title">Send a message</div>
             <input type="hidden" name="_subject" value="New portfolio enquiry" />
             <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
             <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" />
             <div class="form-row2">
               <div class="fg">
@@ -1649,7 +1650,10 @@ ${email}`);
           body: formData
         });
 
-        if (!response.ok) throw new Error('Form delivery failed');
+        const data = await response.json();
+        if (!response.ok || data.success === 'false' || data.success === false) {
+          throw new Error(data.message || 'Form delivery failed');
+        }
 
         contactForm.reset();
         contactStatus.textContent = 'Thanks — your message has been sent.';
