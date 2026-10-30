@@ -15,7 +15,7 @@ App Developer · CMS Optimization & AI Integration Engineer | React · Node.js �
 ## About Section
 
 ```
-App Developer, CMS Optimization & AI Integration Engineer. 5+ years shipping production systems across mobility, logistics, e-commerce, hospitality, and AI.
+App Developer, CMS Optimization & AI Integration Engineer. 4+ years shipping production systems across hospitality, travel, logistics, AdTech, e-commerce, sports and AI.
 
 Numbers that matter:
 → 7+ platforms shipped end-to-end
