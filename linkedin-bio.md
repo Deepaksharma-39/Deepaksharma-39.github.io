@@ -7,7 +7,7 @@ Copy-paste the sections below directly into LinkedIn.
 ## Headline (max 220 chars)
 
 ```
-App Developer · CMS Optimization & AI Integration Engineer | React · Node.js · LangChain · Docker | 7+ Platforms Shipped · 30+ Systems in Production
+App Developer · CMS Optimization & AI Integration Engineer | React · Node.js · LangChain · Docker | 10+ Platforms Shipped · 30+ Systems in Production
 ```
 
 ---
@@ -18,7 +18,7 @@ App Developer · CMS Optimization & AI Integration Engineer | React · Node.js �
 App Developer, CMS Optimization & AI Integration Engineer. 4+ years shipping production systems across hospitality, travel, logistics, AdTech, e-commerce, sports and AI.
 
 Numbers that matter:
-→ 7+ platforms shipped end-to-end
+→ 10+ platforms shipped end-to-end
 → 30+ systems running in production
 → 12+ AI integrations deployed
 
